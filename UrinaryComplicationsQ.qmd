@@ -273,12 +273,22 @@ The study outcomes were centred on the core lower urinary tract symptom score (C
 
 ### Data Import and Preparation
 
-Retrieve and format data from live tables and registry snapshot. Using *openxlsx* (`{r} version(pkg = "openxlsx2")`) [@openxlsx2] to retrieve static snapshot files and *googlesheets4* (`{r} version(pkg = "googlesheets4")`) [@googlesheets4] to retrieve live database tables. Text and code output are integrated using the *epoxy* package (`{r} version(pkg = "epoxy")`) [@epoxy].
+Retrieve and format data from live tables and registry snapshot. Using *openxlsx* (`{r} version(pkg = "openxlsx2")`) [@openxlsx2] to retrieve static snapshot files and *googlesheets4* (`{r} version(pkg = "googlesheets4")`) [@googlesheets4] to retrieve live database tables.
+
+```{r}
+
+SheetID = "https://docs.google.com/spreadsheets/d/1Q7u3-5Q7q94pI2Vq4FAOHNya0upf4vcbK3A5b2twXtU/edit"
+
+```
+
 
 ```{r Registry Table Import}
 
+# Authenticate for sheets using the same token
+gs4_auth(token = drive_token())
+
 Master <- googlesheets4::range_read(
-  ss = "https://docs.google.com/spreadsheets/d/1Q7u3-5Q7q94pI2Vq4FAOHNya0upf4vcbK3A5b2twXtU/edit",
+  ss = SheetID,
   sheet = "Mastersheet",
   range = "A3:AW",
   col_names = TRUE,
