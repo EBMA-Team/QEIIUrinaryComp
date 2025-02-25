@@ -158,7 +158,6 @@ options(
 )
 
 googledrive::drive_auth(cache = ".secrets", email = TRUE)
-googlesheets4::gs4_auth(cache = ".secrets", email = TRUE)
 ```
 
 ## Functions
@@ -285,7 +284,7 @@ SheetID = "https://docs.google.com/spreadsheets/d/1Q7u3-5Q7q94pI2Vq4FAOHNya0upf4
 ```{r Registry Table Import}
 
 # Authenticate for sheets using the same token
-gs4_auth(token = drive_token())
+googlesheets4::gs4_auth(token = drive_token())
 
 Master <- googlesheets4::range_read(
   ss = SheetID,

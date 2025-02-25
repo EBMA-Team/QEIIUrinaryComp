@@ -33,6 +33,6 @@ docs/
 po/*~
 # RStudio Connect folder
 rsconnect/
-
+.secrets
 
 /.quarto/
