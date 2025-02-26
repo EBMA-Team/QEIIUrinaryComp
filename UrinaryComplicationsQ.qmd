@@ -59,9 +59,9 @@ The analysis was conducted in RStudio IDE (RStudio 2024.12.0+467 "Kousa Dogwood"
 
 <!--# Assess the appropriateness and appeal of the title -->
 
-The title has been expressed in a declarative statement regarding the main findings.
+The title has been expressed in a declarative statement regarding the main findings and suggested as the following;
 
-Draft title: Pre-emptive or reactive in-dwelling catheterisation does not impact patient-reported urinary symptoms following lower limb arthroplasty: A prospective cohort study in a metropolitan public hospital.
+*Pre-emptive or reactive in-dwelling catheterisation does not impact patient-reported urinary symptoms following lower limb arthroplasty: A prospective cohort study in a metropolitan public hospital.*
 
 ## STROBE \[1\] Abstract:
 
@@ -71,7 +71,7 @@ Draft title: Pre-emptive or reactive in-dwelling catheterisation does not impact
 
 <!--# Critically assess the justification for conducting the observational study. -->
 
-The rationale for the study and justification can be found in the viability reports conducted prior to initiation.
+The rationale for the study and justification can be found in the viability reports conducted prior to project initiation.
 
 Question check -
 
@@ -139,7 +139,7 @@ pacman::p_load(
 
 ## Authorisations
 
-Pre-authorise access to registry datasets using the *gargle* package (v`{r} utils::packageVersion("gargle")`) [@gargle].
+Access to study assets were pre-authorised using the *gargle* package (v`{r} utils::packageVersion("gargle")`) [@gargle] and *googledrive* (v`{r} utils::packageVersion("googledrive")`) [@googledrive].
 
 ```{r, echo = FALSE}
 
@@ -268,19 +268,35 @@ The study setting is an orthopaedic department within a medium-sized metropolita
 
 <!--# Evaluate the choice of exposure, outcome, and confounding variables. -->
 
-A [core dataset](https://docs.google.com/spreadsheets/d/1x3LChn3Zh7qPkVQ4rRM0MyjdpfpR-myoZp7oAkq_fKc/edit?usp=sharing "Study core dataset") for the study was derived a-priori.
+Before the commencement of data collection, a [core dataset](https://docs.google.com/spreadsheets/d/1x3LChn3Zh7qPkVQ4rRM0MyjdpfpR-myoZp7oAkq_fKc/edit?usp=sharing "Study core dataset") for the study was derived and agreed to by the project investigators to establish the key variables for the study.
+
+### Exposure
+
+The primary exposure variable was the status of in-dwelling catheterisation prior to the arthroplasty procedure (*preemptive IDC*). Patients were pre-emptively catheterised based on the preference of the treating surgeon in collaboration with the attending anaesthetist.
+
+The secondary exposure variable was the status of in-dwelling catheterisation as a treatment for *postoperative urinary retention* (POUR) detected immediately after the arthroplasty procedure.
+
+POUR was defined clinically by the treating consultant in collaboration with the shift nursing staff.
 
 ### Outcome(s)
 
-The study outcomes were centred on the core lower urinary tract symptom score (CLSS).
+The primary outcome was the total score derived from the core lower urinary tract symptom score (CLSS) [@homma2008]. The CLSS is a 11-question self-reported questionnaire that provides overall assessment of relevant symptoms of the lower urinary tract.
 
-## STROBE \[8\] Data Sources/Measurement:
+### Model Covariates
+
+## STROBE \[8\] Data Sources/Measurement
+
+Data for the study were retrieved in the first instance to a cloud-based file (Sheets, Google LLC, USA). A web-based form (Forms, Google LLC, USA) was generated to recreate It comprised the following tables;
+
+-   MasterSheet
+
+-   
 
 ### Data Import and Preparation
 
 Retrieve and format data from live tables and registry snapshot. Using *openxlsx* (`{r} version(pkg = "openxlsx2")`) [@openxlsx2] to retrieve static snapshot files and *googlesheets4* (`{r} version(pkg = "googlesheets4")`) [@googlesheets4] to retrieve live database tables.
 
-```{r}
+```{r, echo = FALSE}
 
 SheetID = "https://docs.google.com/spreadsheets/d/1Q7u3-5Q7q94pI2Vq4FAOHNya0upf4vcbK3A5b2twXtU/edit"
 
@@ -301,7 +317,7 @@ Master <- googlesheets4::range_read(
 )
 
 MasterFilter <- googlesheets4::range_read(
-  ss = "https://docs.google.com/spreadsheets/d/1Q7u3-5Q7q94pI2Vq4FAOHNya0upf4vcbK3A5b2twXtU/edit",
+  ss = SheetID,
   sheet = "MasterFilter",
   range = "A1:BU",
   col_names = TRUE,
@@ -310,6 +326,8 @@ MasterFilter <- googlesheets4::range_read(
 )
 
 ```
+
+Reorganise import table to create STROBE flowchart.
 
 ```{r}
 
