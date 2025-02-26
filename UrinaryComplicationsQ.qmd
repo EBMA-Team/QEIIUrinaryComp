@@ -86,6 +86,7 @@ Load up required packages in advance; check if packages are installed, if not, i
 ```{r Load packages}
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(
+  "parameters",
   "gargle",
   "cardx",
   "lme4",
