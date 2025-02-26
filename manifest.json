@@ -699,6 +699,40 @@
         "Archs": "x64"
       }
     },
+    "bayestestR": {
+      "Source": "CRAN",
+      "Repository": "https://cran.csiro.au",
+      "description": {
+        "Type": "Package",
+        "Package": "bayestestR",
+        "Title": "Understand and Describe Bayesian Models and Posterior\nDistributions",
+        "Version": "0.15.2",
+        "Authors@R": "\n    c(person(given = \"Dominique\",\n             family = \"Makowski\",\n             role = c(\"aut\", \"cre\"),\n             email = \"dom.makowski@gmail.com\",\n             comment = c(ORCID = \"0000-0001-5375-9967\")),\n      person(given = \"Daniel\",\n             family = \"Lüdecke\",\n             role = \"aut\",\n             email = \"d.luedecke@uke.de\",\n             comment = c(ORCID = \"0000-0002-8895-3206\")),\n      person(given = \"Mattan S.\",\n             family = \"Ben-Shachar\",\n             role = \"aut\",\n             email = \"matanshm@post.bgu.ac.il\",\n             comment = c(ORCID = \"0000-0002-4287-4801\")),\n      person(given = \"Indrajeet\",\n             family = \"Patil\",\n             role = \"aut\",\n             email = \"patilindrajeet.science@gmail.com\",\n             comment = c(ORCID = \"0000-0003-1995-6531\")),\n      person(given = \"Micah K.\",\n             family = \"Wilson\",\n             role = \"aut\",\n             email = \"micah.k.wilson@curtin.edu.au\",\n             comment = c(ORCID = \"0000-0003-4143-7308\")),\n      person(given = \"Brenton M.\",\n             family = \"Wiernik\",\n             role = \"aut\",\n             email = \"brenton@wiernik.org\",\n             comment = c(ORCID = \"0000-0001-9560-6336\")),\n      person(given = \"Paul-Christian\",\n             family = \"Bürkner\",\n             role = \"rev\",\n             email = \"paul.buerkner@gmail.com\"),\n      person(given = \"Tristan\",\n             family = \"Mahr\",\n             role = \"rev\",\n             email = \"tristan.mahr@wisc.edu\",\n             comment = c(ORCID = \"0000-0002-8890-5116\")),\n      person(given = \"Henrik\",\n             family = \"Singmann\",\n             role = \"ctb\",\n             email = \"singmann@gmail.com\",\n             comment = c(ORCID = \"0000-0002-4842-3657\")),\n      person(given = \"Quentin F.\",\n             family = \"Gronau\",\n             role = \"ctb\",\n             comment = c(ORCID = \"0000-0001-5510-6943\")),\n      person(given = \"Sam\",\n             family = \"Crawley\",\n             role = \"ctb\",\n             email = \"sam@crawley.nz\",\n             comment = c(ORCID = \"0000-0002-7847-0411\")))",
+        "Maintainer": "Dominique Makowski <dom.makowski@gmail.com>",
+        "Description": "Provides utilities to describe posterior\n    distributions and Bayesian models. It includes point-estimates such as\n    Maximum A Posteriori (MAP), measures of dispersion (Highest Density\n    Interval - HDI; Kruschke, 2015 <doi:10.1016/C2012-0-00477-2>) and\n    indices used for null-hypothesis testing (such as ROPE percentage, pd\n    and Bayes factors). References: Makowski et al. (2021) <doi:10.21105/joss.01541>.",
+        "Depends": "R (>= 3.6)",
+        "Imports": "insight (>= 1.0.1), datawizard (>= 1.0.0), graphics, methods,\nstats, utils",
+        "Suggests": "BayesFactor (>= 0.9.12-4.4), bayesQR, bayesplot, betareg, BH,\nblavaan, bridgesampling, brms, collapse, curl, effectsize,\nemmeans, gamm4, ggdist, ggplot2, glmmTMB, httr2, KernSmooth,\nknitr, lavaan, lme4, logspline (>= 2.1.21), marginaleffects (>=\n0.24.0), MASS, mclust, mediation, modelbased, ordbetareg,\nparameters, patchwork, performance, quadprog, posterior,\nRcppEigen, rmarkdown, rstan, rstanarm, see (>= 0.8.5),\ntestthat, tweedie, withr",
+        "License": "GPL-3",
+        "URL": "https://easystats.github.io/bayestestR/",
+        "BugReports": "https://github.com/easystats/bayestestR/issues",
+        "VignetteBuilder": "knitr",
+        "Encoding": "UTF-8",
+        "Language": "en-US",
+        "RoxygenNote": "7.3.2",
+        "Config/testthat/edition": "3",
+        "Config/testthat/parallel": "true",
+        "Config/rcmdcheck/ignore-inconsequential-notes": "true",
+        "Config/Needs/website": "easystats/easystatstemplate",
+        "Config/Needs/check": "stan-dev/cmdstanr",
+        "NeedsCompilation": "no",
+        "Packaged": "2025-02-07 08:17:09 UTC; domma",
+        "Author": "Dominique Makowski [aut, cre] (<https://orcid.org/0000-0001-5375-9967>),\n  Daniel Lüdecke [aut] (<https://orcid.org/0000-0002-8895-3206>),\n  Mattan S. Ben-Shachar [aut] (<https://orcid.org/0000-0002-4287-4801>),\n  Indrajeet Patil [aut] (<https://orcid.org/0000-0003-1995-6531>),\n  Micah K. Wilson [aut] (<https://orcid.org/0000-0003-4143-7308>),\n  Brenton M. Wiernik [aut] (<https://orcid.org/0000-0001-9560-6336>),\n  Paul-Christian Bürkner [rev],\n  Tristan Mahr [rev] (<https://orcid.org/0000-0002-8890-5116>),\n  Henrik Singmann [ctb] (<https://orcid.org/0000-0002-4842-3657>),\n  Quentin F. Gronau [ctb] (<https://orcid.org/0000-0001-5510-6943>),\n  Sam Crawley [ctb] (<https://orcid.org/0000-0002-7847-0411>)",
+        "Repository": "CRAN",
+        "Date/Publication": "2025-02-07 09:10:02 UTC",
+        "Built": "R 4.4.2; ; 2025-02-18 02:21:10 UTC; windows"
+      }
+    },
     "bigD": {
       "Source": "CRAN",
       "Repository": "https://cran.csiro.au",
@@ -1687,6 +1721,38 @@
         "Date/Publication": "2024-12-06 15:10:10 UTC",
         "Built": "R 4.4.2; x86_64-w64-mingw32; 2025-02-18 01:26:26 UTC; windows",
         "Archs": "x64"
+      }
+    },
+    "datawizard": {
+      "Source": "CRAN",
+      "Repository": "https://cran.csiro.au",
+      "description": {
+        "Type": "Package",
+        "Package": "datawizard",
+        "Title": "Easy Data Wrangling and Statistical Transformations",
+        "Version": "1.0.0",
+        "Authors@R": "c(\n    person(\"Indrajeet\", \"Patil\", , \"patilindrajeet.science@gmail.com\", role = \"aut\",\n           comment = c(ORCID = \"0000-0003-1995-6531\")),\n    person(\"Etienne\", \"Bacher\", , \"etienne.bacher@protonmail.com\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0002-9271-5075\")),\n    person(\"Dominique\", \"Makowski\", , \"dom.makowski@gmail.com\", role = \"aut\",\n           comment = c(ORCID = \"0000-0001-5375-9967\")),\n    person(\"Daniel\", \"Lüdecke\", , \"d.luedecke@uke.de\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-8895-3206\")),\n    person(\"Mattan S.\", \"Ben-Shachar\", , \"matanshm@post.bgu.ac.il\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-4287-4801\")),\n    person(\"Brenton M.\", \"Wiernik\", , \"brenton@wiernik.org\", role = \"aut\",\n           comment = c(ORCID = \"0000-0001-9560-6336\")),\n    person(\"Rémi\", \"Thériault\", , \"remi.theriault@mail.mcgill.ca\", role = \"ctb\",\n           comment = c(ORCID = \"0000-0003-4315-6788\")),\n    person(\"Thomas J.\", \"Faulkenberry\", , \"faulkenberry@tarleton.edu\", role = \"rev\"),\n    person(\"Robert\", \"Garrett\", , \"rcg4@illinois.edu\", role = \"rev\")\n  )",
+        "Maintainer": "Etienne Bacher <etienne.bacher@protonmail.com>",
+        "Description": "A lightweight package to assist in key steps involved in any data\n    analysis workflow: (1) wrangling the raw data to get it in the needed form,\n    (2) applying preprocessing steps and statistical transformations, and\n    (3) compute statistical summaries of data properties and distributions.\n    It is also the data wrangling backend for packages in 'easystats' ecosystem.\n    References: Patil et al. (2022) <doi:10.21105/joss.04684>.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://easystats.github.io/datawizard/",
+        "BugReports": "https://github.com/easystats/datawizard/issues",
+        "Depends": "R (>= 4.0)",
+        "Imports": "insight (>= 1.0.0), stats, utils",
+        "Suggests": "bayestestR, boot, brms, curl, data.table, dplyr (>= 1.1),\neffectsize, emmeans, gamm4, ggplot2 (>= 3.5.0), gt, haven,\nhttr, knitr, lme4, mediation, modelbased, parameters (>=\n0.21.7), poorman (>= 0.2.7), psych, readxl, readr, rio,\nrmarkdown, rstanarm, see, testthat (>= 3.2.1), tibble, tidyr,\nwithr",
+        "VignetteBuilder": "knitr",
+        "Encoding": "UTF-8",
+        "Language": "en-US",
+        "RoxygenNote": "7.3.2",
+        "Config/testthat/edition": "3",
+        "Config/testthat/parallel": "true",
+        "Config/Needs/website": "easystats/easystatstemplate",
+        "NeedsCompilation": "no",
+        "Packaged": "2025-01-09 10:26:58 UTC; etienne",
+        "Author": "Indrajeet Patil [aut] (<https://orcid.org/0000-0003-1995-6531>),\n  Etienne Bacher [aut, cre] (<https://orcid.org/0000-0002-9271-5075>),\n  Dominique Makowski [aut] (<https://orcid.org/0000-0001-5375-9967>),\n  Daniel Lüdecke [aut] (<https://orcid.org/0000-0002-8895-3206>),\n  Mattan S. Ben-Shachar [aut] (<https://orcid.org/0000-0002-4287-4801>),\n  Brenton M. Wiernik [aut] (<https://orcid.org/0000-0001-9560-6336>),\n  Rémi Thériault [ctb] (<https://orcid.org/0000-0003-4315-6788>),\n  Thomas J. Faulkenberry [rev],\n  Robert Garrett [rev]",
+        "Repository": "CRAN",
+        "Date/Publication": "2025-01-10 09:40:05 UTC",
+        "Built": "R 4.4.2; ; 2025-02-18 02:06:50 UTC; windows"
       }
     },
     "dbplyr": {
@@ -4699,6 +4765,39 @@
         "Archs": "x64"
       }
     },
+    "parameters": {
+      "Source": "CRAN",
+      "Repository": "https://cran.csiro.au",
+      "description": {
+        "Type": "Package",
+        "Package": "parameters",
+        "Title": "Processing of Model Parameters",
+        "Version": "0.24.1",
+        "Authors@R": "\n    c(person(given = \"Daniel\",\n             family = \"Lüdecke\",\n             role = c(\"aut\", \"cre\"),\n             email = \"d.luedecke@uke.de\",\n             comment = c(ORCID = \"0000-0002-8895-3206\")),\n      person(given = \"Dominique\",\n             family = \"Makowski\",\n             role = \"aut\",\n             email = \"dom.makowski@gmail.com\",\n             comment = c(ORCID = \"0000-0001-5375-9967\")),\n      person(given = \"Mattan S.\",\n             family = \"Ben-Shachar\",\n             role = \"aut\",\n             email = \"matanshm@post.bgu.ac.il\",\n             comment = c(ORCID = \"0000-0002-4287-4801\")),\n      person(given = \"Indrajeet\",\n             family = \"Patil\",\n             role = \"aut\",\n             email = \"patilindrajeet.science@gmail.com\",\n             comment = c(ORCID = \"0000-0003-1995-6531\")),\n      person(given = \"Søren\",\n             family = \"Højsgaard\",\n             role = \"aut\",\n             email = \"sorenh@math.aau.dk\"),\n      person(given = \"Brenton M.\",\n             family = \"Wiernik\",\n             role = \"aut\",\n             email = \"brenton@wiernik.org\",\n             comment = c(ORCID = \"0000-0001-9560-6336\")),\n      person(given = \"Zen J.\",\n             family = \"Lau\",\n             role = \"ctb\",\n             email = \"zenjuen.lau@ntu.edu.sg\"),\n      person(given = \"Vincent\",\n             family = \"Arel-Bundock\",\n             role = \"ctb\",\n             email = \"vincent.arel-bundock@umontreal.ca\",\n             comment = c(ORCID = \"0000-0003-2042-7063\")),\n      person(given = \"Jeffrey\",\n             family = \"Girard\",\n             role = \"ctb\",\n             email = \"me@jmgirard.com\",\n             comment = c(ORCID = \"0000-0002-7359-3746\")),\n      person(given = \"Christina\",\n             family = \"Maimone\",\n             role = \"rev\",\n             email = \"christina.maimone@northwestern.edu\"),\n      person(given = \"Niels\",\n             family = \"Ohlsen\",\n             role = \"rev\"),\n      person(given = \"Douglas Ezra\",\n             family = \"Morrison\",\n             role = \"ctb\",\n             email = \"dmorrison01@ucla.edu\",\n             comment = c(ORCID = \"0000-0002-7195-830X\")),\n      person(given = \"Joseph\",\n             family = \"Luchman\",\n             role = \"ctb\",\n             email = \"jluchman@gmail.com\",\n             comment = c(ORCID = \"0000-0002-8886-9717\")))",
+        "Maintainer": "Daniel Lüdecke <d.luedecke@uke.de>",
+        "Description": "Utilities for processing the parameters of various\n    statistical models. Beyond computing p values, CIs, and other indices\n    for a wide variety of models (see list of supported models using the\n    function 'insight::supported_models()'), this package implements\n    features like bootstrapping or simulating of parameters and models,\n    feature reduction (feature extraction and variable selection) as well\n    as functions to describe data and variable characteristics (e.g.\n    skewness, kurtosis, smoothness or distribution).",
+        "License": "GPL-3",
+        "URL": "https://easystats.github.io/parameters/",
+        "BugReports": "https://github.com/easystats/parameters/issues",
+        "Depends": "R (>= 3.6)",
+        "Imports": "bayestestR (>= 0.15.0), datawizard (>= 1.0.0), insight (>=\n1.0.0), graphics, methods, stats, utils",
+        "Suggests": "AER, afex, aod, BayesFactor (>= 0.9.12-4.7), BayesFM, bbmle,\nbetareg, BH, biglm, blme, boot, brglm2, brms, broom,\nbroom.mixed, cAIC4, car, carData, cgam, ClassDiscovery,\nclubSandwich, cluster, cobalt, coda, coxme, cplm, dbscan, did,\ndistributional, domir (>= 0.2.0), drc, DRR, effectsize (>=\n0.8.6), EGAnet, emmeans (>= 1.7.0), epiR, estimatr, factoextra,\nFactoMineR, faraway, fastICA, fixest, fpc, gam, gamlss, gee,\ngeepack, ggeffects (>= 1.3.2), ggplot2, GLMMadaptive, glmmTMB\n(>= 1.1.10), glmtoolbox, GPArotation, gt, haven, httr2, Hmisc,\nivreg, knitr, lavaan, lfe, lm.beta, lme4, lmerTest, lmtest,\nlogistf, logitr, logspline, lqmm, M3C, marginaleffects (>=\n0.20.4), MASS, Matrix, mclogit, mclust, MCMCglmm, mediation,\nmerDeriv, metaBMA, metafor, mfx, mgcv, mice (>= 3.17.0), mmrm,\nmultcomp, MuMIn, NbClust, nFactors, nestedLogit, nlme, nnet,\nopenxlsx, ordinal, panelr, pbkrtest, PCDimension, performance\n(>= 0.12.0), plm, PMCMRplus, poorman, posterior, PROreg (>=\n1.3.0), pscl, psych, pvclust, quantreg, randomForest,\nRcppEigen, rmarkdown, rms, rstan, rstanarm, sandwich, see (>=\n0.8.1), serp, sparsepca, survey, survival, svylme, testthat (>=\n3.2.1), tidyselect, tinytable (>= 0.1.0), TMB, truncreg,\nvdiffr, VGAM, WeightIt (>= 1.2.0), withr, WRS2",
+        "VignetteBuilder": "knitr",
+        "Encoding": "UTF-8",
+        "Language": "en-US",
+        "RoxygenNote": "7.3.2",
+        "Config/testthat/edition": "3",
+        "Config/testthat/parallel": "true",
+        "Config/Needs/website": "easystats/easystatstemplate",
+        "Config/rcmdcheck/ignore-inconsequential-notes": "true",
+        "NeedsCompilation": "no",
+        "Packaged": "2025-01-14 15:36:22 UTC; mail",
+        "Author": "Daniel Lüdecke [aut, cre] (<https://orcid.org/0000-0002-8895-3206>),\n  Dominique Makowski [aut] (<https://orcid.org/0000-0001-5375-9967>),\n  Mattan S. Ben-Shachar [aut] (<https://orcid.org/0000-0002-4287-4801>),\n  Indrajeet Patil [aut] (<https://orcid.org/0000-0003-1995-6531>),\n  Søren Højsgaard [aut],\n  Brenton M. Wiernik [aut] (<https://orcid.org/0000-0001-9560-6336>),\n  Zen J. Lau [ctb],\n  Vincent Arel-Bundock [ctb] (<https://orcid.org/0000-0003-2042-7063>),\n  Jeffrey Girard [ctb] (<https://orcid.org/0000-0002-7359-3746>),\n  Christina Maimone [rev],\n  Niels Ohlsen [rev],\n  Douglas Ezra Morrison [ctb] (<https://orcid.org/0000-0002-7195-830X>),\n  Joseph Luchman [ctb] (<https://orcid.org/0000-0002-8886-9717>)",
+        "Repository": "CRAN",
+        "Date/Publication": "2025-01-14 16:40:02 UTC",
+        "Built": "R 4.4.2; ; 2025-02-20 02:36:49 UTC; windows"
+      }
+    },
     "parsnip": {
       "Source": "CRAN",
       "Repository": "https://cran.csiro.au",
@@ -7110,7 +7209,7 @@
       "checksum": "61db6b74797af3d214dc41d514750010"
     },
     ".secrets/c13dc354db9600c8cd9b2bd868d1bf25_cscholes@ebma.com.au": {
-      "checksum": "22becbdc6117acc19a6b18741c74ada6"
+      "checksum": "f826139b99a7de1cd01021e1261d89e5"
     },
     "_quarto.yml": {
       "checksum": "d1d42b4a915ea492c1f2c52e71ebcd3e"
@@ -7125,10 +7224,10 @@
       "checksum": "b17fb5fc4411e53302e837bc0d7607ed"
     },
     "UrinaryComplicationsQ.html": {
-      "checksum": "6735cd0ab4c96b97c8f9f1d3ac8707c9"
+      "checksum": "57034fa7199ba3a1643055473a6a47ae"
     },
     "UrinaryComplicationsQ.qmd": {
-      "checksum": "c55b0ae532fac1fc2353a0a170a6fb0a"
+      "checksum": "f9a95f57564d50914aaf7aff3bec4935"
     },
     "UrinaryComplicationsQ_files/figure-html/CLSS Plot 1-1.png": {
       "checksum": "e32b80be1d1d1ccb7fd3372797be8e7f"
@@ -7167,51 +7266,54 @@
       "checksum": "9c905fa74523085ff05a11b288985b86"
     },
     "UrinaryComplicationsQ_files/figure-html/unnamed-chunk-13-1.png": {
-      "checksum": "8ca4ae974b893cf5f63381e9893f2800"
+      "checksum": "9c905fa74523085ff05a11b288985b86"
     },
     "UrinaryComplicationsQ_files/figure-html/unnamed-chunk-14-1.png": {
-      "checksum": "9c905fa74523085ff05a11b288985b86"
+      "checksum": "8ca4ae974b893cf5f63381e9893f2800"
     },
     "UrinaryComplicationsQ_files/figure-html/unnamed-chunk-15-1.png": {
       "checksum": "7594becf12f0baa993acc6d211ce7023"
     },
     "UrinaryComplicationsQ_files/figure-html/unnamed-chunk-16-1.png": {
-      "checksum": "69fd41aa98f0571c079895b5b1bd657e"
+      "checksum": "7594becf12f0baa993acc6d211ce7023"
     },
     "UrinaryComplicationsQ_files/figure-html/unnamed-chunk-17-1.png": {
-      "checksum": "a57139dd2f08c1f36296b5ea70376232"
+      "checksum": "69fd41aa98f0571c079895b5b1bd657e"
     },
     "UrinaryComplicationsQ_files/figure-html/unnamed-chunk-18-1.png": {
-      "checksum": "946e05ec1da1a1c2f7556655e993fadd"
+      "checksum": "a57139dd2f08c1f36296b5ea70376232"
     },
     "UrinaryComplicationsQ_files/figure-html/unnamed-chunk-19-1.png": {
-      "checksum": "d39b5c368e25870454d3cf4622089166"
+      "checksum": "946e05ec1da1a1c2f7556655e993fadd"
     },
     "UrinaryComplicationsQ_files/figure-html/unnamed-chunk-20-1.png": {
-      "checksum": "04b4799e3f3e668f641529c8e1a38c34"
+      "checksum": "d39b5c368e25870454d3cf4622089166"
     },
     "UrinaryComplicationsQ_files/figure-html/unnamed-chunk-21-1.png": {
-      "checksum": "ec5a3fca1b36143664c078e06594cbd0"
+      "checksum": "04b4799e3f3e668f641529c8e1a38c34"
     },
     "UrinaryComplicationsQ_files/figure-html/unnamed-chunk-22-1.png": {
-      "checksum": "679d89e11964d7762a53e494e7525182"
+      "checksum": "ec5a3fca1b36143664c078e06594cbd0"
     },
     "UrinaryComplicationsQ_files/figure-html/unnamed-chunk-23-1.png": {
-      "checksum": "f25e10f7be91c0d22706d8a449c5cc06"
+      "checksum": "679d89e11964d7762a53e494e7525182"
     },
     "UrinaryComplicationsQ_files/figure-html/unnamed-chunk-24-1.png": {
-      "checksum": "974a9aa11f1527ae508af73a1dce0b4b"
+      "checksum": "f25e10f7be91c0d22706d8a449c5cc06"
     },
     "UrinaryComplicationsQ_files/figure-html/unnamed-chunk-25-1.png": {
-      "checksum": "46b8a82d337e303cf57c9d2dc8844b38"
+      "checksum": "974a9aa11f1527ae508af73a1dce0b4b"
     },
     "UrinaryComplicationsQ_files/figure-html/unnamed-chunk-26-1.png": {
-      "checksum": "974a9aa11f1527ae508af73a1dce0b4b"
+      "checksum": "46b8a82d337e303cf57c9d2dc8844b38"
     },
     "UrinaryComplicationsQ_files/figure-html/unnamed-chunk-27-1.png": {
       "checksum": "46b8a82d337e303cf57c9d2dc8844b38"
     },
     "UrinaryComplicationsQ_files/figure-html/unnamed-chunk-8-1.png": {
+      "checksum": "32b96646245d73624e5a91a3a2031ff0"
+    },
+    "UrinaryComplicationsQ_files/figure-html/unnamed-chunk-9-1.png": {
       "checksum": "32b96646245d73624e5a91a3a2031ff0"
     },
     "UrinaryComplicationsQ_files/libs/bootstrap/bootstrap-icons.css": {
