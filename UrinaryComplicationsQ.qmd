@@ -148,6 +148,13 @@ options(gargle_oauth_cache = ".secrets")
 # Use the saved token for non-interactive auth
 googledrive::drive_auth(email = "cscholes@ebma.com.au", 
           cache = ".secrets")
+
+options(
+  gargle_oauth_cache = ".secrets",
+  gargle_oauth_email = TRUE
+)
+
+googledrive::drive_auth(cache = ".secrets", email = TRUE)
 ```
 
 ```{r, echo = FALSE}
@@ -163,8 +170,6 @@ googledrive::drive_auth(cache = ".secrets", email = TRUE)
 ## Functions
 
 Include a series of functions to call later in the file for processing data imports.
-
-
 
 ## STROBE \[2\] Background
 
@@ -280,11 +285,10 @@ SheetID = "https://docs.google.com/spreadsheets/d/1Q7u3-5Q7q94pI2Vq4FAOHNya0upf4
 
 ```
 
-
 ```{r Registry Table Import}
 
 # Authenticate for sheets using the same token
-googlesheets4::gs4_auth(token = drive_token())
+googlesheets4::gs4_auth(token = googledrive::drive_token())
 
 Master <- googlesheets4::range_read(
   ss = SheetID,
@@ -305,7 +309,6 @@ MasterFilter <- googlesheets4::range_read(
 )
 
 ```
-
 
 ```{r}
 
