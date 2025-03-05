@@ -204,39 +204,45 @@ The study objectives have evolved over time. The original study question as per 
 
 : Table 1a: Study *Question 1* as per study plan.
 
-| Component | Study-Specific |
-|----|----|
-| Population | In patients electing to undergo hip or knee total arthroplasty with one of four participating surgeons in a metropolitan public hospital |
-| Intervention | Receiving pre-emptive urinary catheterisation |
-| Comparator | Compared to those that do not |
-| Outcomes | How do i) urinary symptoms as measured by the core lower urinary tract symptom score (CLSS) and ii) satisfaction with urinary management in-hospital at two weeks followup differ? |
-| Study Design | Within an observational cohort design embedded into the SHARKS registry (QEII Orthopaedic Department) |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Component                        | Study-Specific                                                                                                                                                                     |
++==================================+====================================================================================================================================================================================+
+| Population                       | In patients electing to undergo hip or knee total arthroplasty with one of four participating surgeons in a metropolitan public hospital                                           |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Intervention                     | Receiving pre-emptive urinary catheterisation                                                                                                                                      |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Comparator                       | Compared to those that do not                                                                                                                                                      |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Outcomes                         | How do i) urinary symptoms as measured by the core lower urinary tract symptom score (CLSS) and ii) satisfaction with urinary management in-hospital at two weeks followup differ? |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Study Design                     | Within an observational cohort design embedded into the SHARKS registry (QEII Orthopaedic Department)                                                                              |
++----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 : Table 1b: Study *Question 2*
 
 ### Hypotheses
 
-+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Question | Clinical                                                                                                                                                                       | Statistical                                                                                                                                                   |
-+==========+================================================================================================================================================================================+===============================================================================================================================================================+
-| 1        | 1.  Patients reporting an increase or appearance of lower urinary tract symptoms will possess a combination of risk factors, including                                         | H1: The predicted probability of a change in urinary symptoms by a multivariable model will be closer to actual probabilities than expected by chance         |
-|          |                                                                                                                                                                                |                                                                                                                                                               |
-|          |     1.  Symptoms prior to surgery                                                                                                                                              | H0: The predicted probability of a change in urinary symptoms by a multivariable model will **not be** closer to actual probabilities than expected by chance |
-|          |                                                                                                                                                                                |                                                                                                                                                               |
-|          |     2.  Catheterisation (planned vs unplanned)                                                                                                                                 |                                                                                                                                                               |
-|          |                                                                                                                                                                                |                                                                                                                                                               |
-|          |     3.  Comorbidities                                                                                                                                                          |                                                                                                                                                               |
-|          |                                                                                                                                                                                |                                                                                                                                                               |
-|          |     4.  Older age                                                                                                                                                              |                                                                                                                                                               |
-|          |                                                                                                                                                                                |                                                                                                                                                               |
-|          |     5.  Male gender                                                                                                                                                            |                                                                                                                                                               |
-+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1        | Patients with symptoms will tend to be less satisfied with the management received for managing POUR                                                                           |                                                                                                                                                               |
-+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 2        | Patients receiving reactive catheterisation on the recovery ward in response to image-detected urinary retention will report worse CLSS and satisfaction at two week follow up | H1: The predicted probability of a postoperative urinary symptoms by a multivariable model will be closer to actual probabilities than expected by chance     |
-|          |                                                                                                                                                                                |                                                                                                                                                               |
-|          |                                                                                                                                                                                | H0: The predicted probability of a change in urinary symptoms by a multivariable model will **not be** closer to actual probabilities than expected by chance |
-+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Question  | Clinical                                                                                                                                                                       | Statistical                                                                                                                                                   |
++===========+================================================================================================================================================================================+===============================================================================================================================================================+
+| 1         | 1.  Patients reporting an increase or appearance of lower urinary tract symptoms will possess a combination of risk factors, including                                         | H1: The predicted probability of a change in urinary symptoms by a multivariable model will be closer to actual probabilities than expected by chance         |
+|           |                                                                                                                                                                                |                                                                                                                                                               |
+|           |     1.  Symptoms prior to surgery                                                                                                                                              | H0: The predicted probability of a change in urinary symptoms by a multivariable model will **not be** closer to actual probabilities than expected by chance |
+|           |                                                                                                                                                                                |                                                                                                                                                               |
+|           |     2.  Catheterisation (planned vs unplanned)                                                                                                                                 |                                                                                                                                                               |
+|           |                                                                                                                                                                                |                                                                                                                                                               |
+|           |     3.  Comorbidities                                                                                                                                                          |                                                                                                                                                               |
+|           |                                                                                                                                                                                |                                                                                                                                                               |
+|           |     4.  Older age                                                                                                                                                              |                                                                                                                                                               |
+|           |                                                                                                                                                                                |                                                                                                                                                               |
+|           |     5.  Male gender                                                                                                                                                            |                                                                                                                                                               |
++-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 1         | Patients with symptoms will tend to be less satisfied with the management received for managing POUR                                                                           |                                                                                                                                                               |
++-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2         | Patients receiving reactive catheterisation on the recovery ward in response to image-detected urinary retention will report worse CLSS and satisfaction at two week follow up | H1: The predicted probability of a postoperative urinary symptoms by a multivariable model will be closer to actual probabilities than expected by chance     |
+|           |                                                                                                                                                                                |                                                                                                                                                               |
+|           |                                                                                                                                                                                | H0: The predicted probability of a change in urinary symptoms by a multivariable model will **not be** closer to actual probabilities than expected by chance |
++-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 : Table 2: Study hypotheses for present analysis
 
@@ -510,6 +516,10 @@ CLSSTotal2 <- dplyr::left_join(
 <!--# Critically analyze potential sources of bias and the adequacy of methods used to address them. -->
 
 ## Missing Data
+
+Assessment
+
+Management
 
 ## STROBE \[10\] Study size:
 
@@ -1013,6 +1023,32 @@ CLSSModTable <- gtsummary::tbl_regression(
 
 knitr::knit_print(CLSSModTable)
 
+
+```
+
+### Regression Results - Q2
+
+Complete case analysis
+
+```{r}
+
+
+CCAMod <- stats::lm(
+  formula = `Postoperative CLSS - Total score` ~ `Pre-emptive IDC` + `Baseline CLSS - Total Score` + Bilateral + AgeAtSurgery + Sex,
+  data = MasterFilter2
+)
+
+
+
+```
+
+```{r}
+
+CCAModTable <- gtsummary::tbl_regression(
+  CCAMod
+)
+
+knitr::knit_print(CCAModTable)
 
 ```
 
