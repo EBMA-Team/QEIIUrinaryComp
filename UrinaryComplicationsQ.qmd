@@ -61,11 +61,13 @@ The analysis was conducted in RStudio IDE (RStudio 2024.12.0+467 "Kousa Dogwood"
 
 The title has been expressed in a declarative statement regarding the main findings and suggested as the following;
 
-*Pre-emptive or reactive in-dwelling catheterisation does not impact patient-reported urinary symptoms following lower limb arthroplasty: A prospective cohort study in a metropolitan public hospital.*
+*Pre-emptive or reactive in-dwelling catheterisation does not meaningfully impact patient-reported urinary symptoms following lower limb arthroplasty: A prospective cohort study in a metropolitan public hospital.*
 
 ## STROBE \[1\] Abstract:
 
 <!--# Critically analyse the informative and balanced nature of the abstract. -->
+
+To be finalised as part of manuscrupt.
 
 # Analysis Introduction:
 
@@ -81,7 +83,7 @@ Study plan -
 
 ## Analysis Preparation
 
-Load up required packages in advance; check if packages are installed, if not, install them. Citations applied to each library at first use in the text.
+Load up required packages in advance using the *pacman* package (v`{r} utils::packageVersion("pacman")`) [@pacman]; check if packages are installed, if not, install them. Citations applied to each library at first use in the text.
 
 ```{r Load packages}
 if (!require("pacman")) install.packages("pacman")
@@ -109,7 +111,6 @@ pacman::p_load(
   "lubridate",
   "forcats",
   "gt",
-  "consort",
   "gtsummary",
   "flextable",
   "survival",
@@ -204,19 +205,19 @@ The study objectives have evolved over time. The original study question as per 
 
 : Table 1a: Study *Question 1* as per study plan.
 
-+----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Component                        | Study-Specific                                                                                                                                                                     |
-+==================================+====================================================================================================================================================================================+
-| Population                       | In patients electing to undergo hip or knee total arthroplasty with one of four participating surgeons in a metropolitan public hospital                                           |
-+----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Intervention                     | Receiving pre-emptive urinary catheterisation                                                                                                                                      |
-+----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Comparator                       | Compared to those that do not                                                                                                                                                      |
-+----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Outcomes                         | How do i) urinary symptoms as measured by the core lower urinary tract symptom score (CLSS) and ii) satisfaction with urinary management in-hospital at two weeks followup differ? |
-+----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Study Design                     | Within an observational cohort design embedded into the SHARKS registry (QEII Orthopaedic Department)                                                                              |
-+----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Component    | Study-Specific                                                                                                                                                                     |
++==============+====================================================================================================================================================================================+
+| Population   | In patients electing to undergo hip or knee total arthroplasty with one of four participating surgeons in a metropolitan public hospital                                           |
++--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Intervention | Receiving pre-emptive urinary catheterisation                                                                                                                                      |
++--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Comparator   | Compared to those that do not                                                                                                                                                      |
++--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Outcomes     | How do i) urinary symptoms as measured by the core lower urinary tract symptom score (CLSS) and ii) satisfaction with urinary management in-hospital at two weeks followup differ? |
++--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Study Design | Within an observational cohort design embedded into the SHARKS registry (QEII Orthopaedic Department)                                                                              |
++--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 : Table 1b: Study *Question 2*
 
@@ -252,7 +253,7 @@ The study objectives have evolved over time. The original study question as per 
 
 <!--# Critically evaluate the appropriateness of the chosen observational study design (e.g., cohort, case-control). -->
 
-Observational cohort study embedded into a department clinical quality registry for lower limb arthroplasty (SHARKS).
+Observational cohort study embedded into a department clinical quality registry for lower limb arthroplasty (SHARKS), with pre-post assessment of patient-reported outcomes.
 
 ## STROBE \[5\] Setting:
 
@@ -262,7 +263,23 @@ The study setting is an orthopaedic department within a medium-sized metropolita
 
 ## STROBE \[6\] Participants:
 
-*Critique the definition of the study population, including inclusion and exclusion criteria.*
+<!--# Critique the definition of the study population, including inclusion and exclusion criteria. -->
+
+Patients were approached to participate if they were booked to undergoing primary lower limb total joint arthroplasty (hip or knee) within the orthopaedic department and were presenting for preoperative anaesthetic workup between November 2020 and June 2023 under the care of a surgeon contributing to the department registry (SHARKS).
+
+Patients were excluded for the following reasons
+
+-   Underwent surgery for different condition
+
+-   Surgery was not primary
+
+-   Surgery did not go ahead as planned (not rescheduled within recruitment time period) \| removed from surgery wait list
+
+-   Comorbidity specific to the urinary system
+
+-   Underwent surgery under the care of a consultant not contributing to the registry
+
+-   Did not possess adequate English skills to answer the PROMs
 
 ## STROBE \[7\] Variables:
 
@@ -294,7 +311,7 @@ Data for the study were retrieved in the first instance to a cloud-based file (S
 
 ### Data Import and Preparation
 
-Retrieve and format data from live tables and registry snapshot. Using *openxlsx* (`{r} version(pkg = "openxlsx2")`) [@openxlsx2] to retrieve static snapshot files and *googlesheets4* (`{r} version(pkg = "googlesheets4")`) [@googlesheets4] to retrieve live database tables.
+Data was retrieved from the live study file using *googlesheets4* (`{r} version(pkg = "googlesheets4")`) [@googlesheets4].
 
 ```{r, echo = FALSE}
 
@@ -302,7 +319,7 @@ SheetID = "https://docs.google.com/spreadsheets/d/1Q7u3-5Q7q94pI2Vq4FAOHNya0upf4
 
 ```
 
-```{r Registry Table Import}
+```{r Study Table Import}
 
 # Authenticate for sheets using the same token
 googlesheets4::gs4_auth(token = googledrive::drive_token())
@@ -327,7 +344,7 @@ MasterFilter <- googlesheets4::range_read(
 
 ```
 
-Reorganise import table to create STROBE flowchart.
+The imported tables were reorganised to create STROBE flowchart using *tidyverse* (`{r} version(pkg = "tidyverse")`) [@tidyverse]. The *stringr* package (`{r} version(pkg = "stringr")`) [@stringr] was used to recode new variables.
 
 ```{r}
 
@@ -375,7 +392,7 @@ CombID = if_else(!is.na(followup),
 
 ```
 
-*Prepare analysis dataset*
+Further manipulations were performed using *tidyverse* to clean the data for input into a recruitment flowchart [@Vandenbroucke2007].
 
 ```{r}
 
@@ -424,7 +441,7 @@ MasterFilter2 <- MasterFilter |> dplyr::mutate(
   
 ```
 
-*Convert PROMS to long dataset*
+The master dataset was converted to *long* format to enable plotting of PROMs data between pre and post arthroplasty timepoints.
 
 ```{r}
 MasterPROM1 <- MasterFilter |> dplyr::mutate(
@@ -492,7 +509,7 @@ CLSSQuestion <- tidyr::pivot_longer(
 
 ```
 
-*Establish model input dataset*
+The master dataset was sliced down to the minimal inputs required for model generation.
 
 ```{r}
 CLSSTotal2 <- dplyr::left_join(
@@ -514,6 +531,30 @@ CLSSTotal2 <- dplyr::left_join(
 ## STROBE \[9\] Bias:
 
 <!--# Critically analyze potential sources of bias and the adequacy of methods used to address them. -->
+
+Retrospective cohort analyses are subject to a number of biases as noted by [@sedgwick2014]. Specific to this analysis, the following considerations are noted below.
+
+Table 9: Biases in analysis of an observational cohort.
+
++-------------------+-------------------------------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Bias              | Definition                                                                                      | Source                    | Mitigation                                                                                                                                                                   |
++===================+=================================================================================================+===========================+==============================================================================================================================================================================+
+| Selection         | Patient recruitment is such that the sample becomes unrepresentative of population              | [@sedgwick2014]           | The SHARKS registry represents \~70% of cases performed in the department. All patients eligible for recruitment during the recruitment period were approached for consent.  |
+|                   |                                                                                                 |                           |                                                                                                                                                                              |
+|                   |                                                                                                 |                           | The proportion of non-english speaking patients in the hospital population remains unmitigated as a source of bias                                                           |
++-------------------+-------------------------------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Information bias  | Patient responses are systematically different from reality                                     | [@sedgwick2014]           | Considering the subject matter and the method of PROMs collection, information bias cannot be fully mitigated in this sample.                                                |
+|                   |                                                                                                 |                           |                                                                                                                                                                              |
+|                   |                                                                                                 |                           | Optimism correction was simulated as part of sensitivity analysis to investigate the potential of this source of bias                                                        |
++-------------------+-------------------------------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Confounder        | A variable of interest and a target outcome simultaneously influenced by a third variable       | [@tennant2020]            | Regression models were used to adjust models for estimated confounders identified through minimal adjustment sets using directed acyclic graphs.                             |
++-------------------+-------------------------------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Missing data      | The absence of a data value where a treatment record is eligible to have a data value collected | [@carroll2020]            | Missingness in PROMs date was addressed with multiple imputation (see Missing Data)                                                                                          |
++-------------------+-------------------------------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Pseudoreplication | Analyse data while ignoring dependency between observations. Inadequate model specification.    | [@davies2015; @lazic2010] | Used mixed effects linear model for procedure duration with patient identifier as random effect. Cluster for patient in survival (all-cause failure and retear).             |
++-------------------+-------------------------------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+## Missing Data
 
 ## Missing Data
 
@@ -1038,6 +1079,12 @@ CCAMod <- stats::lm(
   data = MasterFilter2
 )
 
+CCAMod1 <- stats::lm(
+  formula = `Postoperative CLSS - Total score` ~ `Pre-emptive IDC` + `Baseline CLSS - Total Score` + Bilateral + AgeAtSurgery + Sex,
+  data = MasterFilter2,
+  subset = `Reactive IDC insertion` == "No"
+)
+
 
 
 ```
@@ -1049,6 +1096,16 @@ CCAModTable <- gtsummary::tbl_regression(
 )
 
 knitr::knit_print(CCAModTable)
+
+```
+
+```{r}
+
+CCAModTable2 <- gtsummary::tbl_regression(
+  CCAMod1
+)
+
+knitr::knit_print(CCAModTable2)
 
 ```
 
