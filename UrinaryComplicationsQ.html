@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.5.17">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 /* CSS for citations */
 div.csl-bib-body { }
@@ -75,11 +109,10 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#analysis-preparation" id="toc-analysis-preparation" class="nav-link" data-scroll-target="#analysis-preparation"><span class="header-section-number">1.1</span> Analysis Preparation</a></li>
   <li><a href="#authorisations" id="toc-authorisations" class="nav-link" data-scroll-target="#authorisations"><span class="header-section-number">1.2</span> Authorisations</a></li>
-  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions"><span class="header-section-number">1.3</span> Functions</a></li>
-  <li><a href="#strobe-2-background" id="toc-strobe-2-background" class="nav-link" data-scroll-target="#strobe-2-background"><span class="header-section-number">1.4</span> STROBE [2] Background</a></li>
-  <li><a href="#strobe-3-objectives" id="toc-strobe-3-objectives" class="nav-link" data-scroll-target="#strobe-3-objectives"><span class="header-section-number">1.5</span> STROBE [3] Objectives</a>
+  <li><a href="#strobe-2-background" id="toc-strobe-2-background" class="nav-link" data-scroll-target="#strobe-2-background"><span class="header-section-number">1.3</span> STROBE [2] Background</a></li>
+  <li><a href="#strobe-3-objectives" id="toc-strobe-3-objectives" class="nav-link" data-scroll-target="#strobe-3-objectives"><span class="header-section-number">1.4</span> STROBE [3] Objectives</a>
   <ul class="collapse">
-  <li><a href="#hypotheses" id="toc-hypotheses" class="nav-link" data-scroll-target="#hypotheses"><span class="header-section-number">1.5.1</span> Hypotheses</a></li>
+  <li><a href="#hypotheses" id="toc-hypotheses" class="nav-link" data-scroll-target="#hypotheses"><span class="header-section-number">1.4.1</span> Hypotheses</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="header-section-number">2</span> Methods:</a>
@@ -89,9 +122,11 @@ div.csl-indent {
   <li><a href="#strobe-6-participants" id="toc-strobe-6-participants" class="nav-link" data-scroll-target="#strobe-6-participants"><span class="header-section-number">2.3</span> STROBE [6] Participants:</a></li>
   <li><a href="#strobe-7-variables" id="toc-strobe-7-variables" class="nav-link" data-scroll-target="#strobe-7-variables"><span class="header-section-number">2.4</span> STROBE [7] Variables:</a>
   <ul class="collapse">
-  <li><a href="#outcomes" id="toc-outcomes" class="nav-link" data-scroll-target="#outcomes"><span class="header-section-number">2.4.1</span> Outcome(s)</a></li>
+  <li><a href="#exposure" id="toc-exposure" class="nav-link" data-scroll-target="#exposure"><span class="header-section-number">2.4.1</span> Exposure</a></li>
+  <li><a href="#outcomes" id="toc-outcomes" class="nav-link" data-scroll-target="#outcomes"><span class="header-section-number">2.4.2</span> Outcome(s)</a></li>
+  <li><a href="#model-covariates" id="toc-model-covariates" class="nav-link" data-scroll-target="#model-covariates"><span class="header-section-number">2.4.3</span> Model Covariates</a></li>
   </ul></li>
-  <li><a href="#strobe-8-data-sourcesmeasurement" id="toc-strobe-8-data-sourcesmeasurement" class="nav-link" data-scroll-target="#strobe-8-data-sourcesmeasurement"><span class="header-section-number">2.5</span> STROBE [8] Data Sources/Measurement:</a>
+  <li><a href="#strobe-8-data-sourcesmeasurement" id="toc-strobe-8-data-sourcesmeasurement" class="nav-link" data-scroll-target="#strobe-8-data-sourcesmeasurement"><span class="header-section-number">2.5</span> STROBE [8] Data Sources/Measurement</a>
   <ul class="collapse">
   <li><a href="#data-import-and-preparation" id="toc-data-import-and-preparation" class="nav-link" data-scroll-target="#data-import-and-preparation"><span class="header-section-number">2.5.1</span> Data Import and Preparation</a></li>
   </ul></li>
@@ -179,7 +214,7 @@ div.csl-indent {
 <p><strong>EBMAReference</strong>: Pub_Catheterisation_CB030Jun20</p>
 <p><strong>Version:</strong> 1.0</p>
 <!--# Check sharing settings of manuscript when attaching as supplementary file -->
-<p>This analysis is a companion piece to the <a href="https://docs.google.com/document/d/1clQD9FLJddAxSkf4m3Ox4_skqEmkz8ieoxdEDVjXvPo/edit?usp=sharing" title="Link to RAS manuscript draft">manuscript</a> of the project. The analysis report has been organised as per the STROBE guidelines and checklist <span class="citation" data-cites="Vandenbroucke2007">(<a href="#ref-Vandenbroucke2007" role="doc-biblioref">Vandenbroucke et al. 2007</a>)</span>. The contents of the sections has been derived from the manuscript (partly completed at the time of drafting), the <a href="https://drive.google.com/file/d/15XY0UEf0YYIWuJhtPWUDXbBLfwnKZAOr/view?usp=sharing" title="Early RAS HREC protocol - approved">protocol</a> approved by the local health district HREC 13-Jun-2023, as well as an earlier <a href="https://docs.google.com/presentation/d/1cj4_lGa0OhAg25rQvJh1M1d_UirlHdb6Y9L7pL1IaSc/edit?usp=sharing" title="Early RAS study viability report">study viability report</a> generated by EBMA, and the results of the analysis, where appropriate.The analysis was generated using R <span class="citation" data-cites="base">(<a href="#ref-base" role="doc-biblioref">2023</a>)</span> <code>R.Version()$version.string</code> in RStudio (v2024.12.1+563) and Quarto (v1.4.549) with appropriate specialised packages as required. Code and text were combined within the report using the <em>epoxy</em> package (v1.0.0)) <span class="citation" data-cites="epoxy">(<a href="#ref-epoxy" role="doc-biblioref">Aden-Buie 2023</a>)</span>.</p>
+<p>This analysis is a companion piece to the <a href="https://docs.google.com/document/d/1clQD9FLJddAxSkf4m3Ox4_skqEmkz8ieoxdEDVjXvPo/edit?usp=sharing" title="Link to RAS manuscript draft">manuscript</a> of the project. The analysis report has been organised as per the STROBE guidelines and checklist <span class="citation" data-cites="Vandenbroucke2007">(<a href="#ref-Vandenbroucke2007" role="doc-biblioref">Vandenbroucke et al. 2007</a>)</span>. The contents of the sections has been derived from the manuscript (partly completed at the time of drafting), the <a href="https://drive.google.com/file/d/11nJk9FzYCnnvkSFyO_7dKt1W2sqc85N4/view?usp=sharing">protocol</a> approved by the local health district HREC 13-Jun-2023, as well as an earlier study viability report generated by EBMA, and the results of the analysis, where appropriate.The analysis was generated using R <span class="citation" data-cites="base">(<a href="#ref-base" role="doc-biblioref">2023</a>)</span> <code>R.Version()$version.string</code> in RStudio (v2024.12.1+563) and Quarto (v1.4.549) with appropriate specialised packages as required. Code and text were combined within the report using the <em>epoxy</em> package (v1.0.0)) <span class="citation" data-cites="epoxy">(<a href="#ref-epoxy" role="doc-biblioref">Aden-Buie 2023</a>)</span>.</p>
 </section>
 <section id="reporting" class="level2" data-number="0.2">
 <h2 data-number="0.2" class="anchored" data-anchor-id="reporting"><span class="header-section-number">0.2</span> Reporting</h2>
@@ -202,39 +237,35 @@ div.csl-indent {
 <section id="strobe-1-title" class="level2" data-number="0.3">
 <h2 data-number="0.3" class="anchored" data-anchor-id="strobe-1-title"><span class="header-section-number">0.3</span> STROBE [1] Title:</h2>
 <!--# Assess the appropriateness and appeal of the title -->
-<p>The title has been expressed in a declarative statement regarding the main findings.</p>
-<p>Draft title: Pre-emptive or reactive in-dwelling catheterisation does not impact patient-reported urinary symptoms following lower limb arthroplasty: A prospective cohort study in a metropolitan public hospital.</p>
+<p>The title has been expressed in a declarative statement regarding the main findings and suggested as the following;</p>
+<p><em>Pre-emptive or reactive in-dwelling catheterisation does not meaningfully impact patient-reported urinary symptoms following lower limb arthroplasty: A prospective cohort study in a metropolitan public hospital.</em></p>
 </section>
 <section id="strobe-1-abstract" class="level2" data-number="0.4">
 <h2 data-number="0.4" class="anchored" data-anchor-id="strobe-1-abstract"><span class="header-section-number">0.4</span> STROBE [1] Abstract:</h2>
 <!--# Critically analyse the informative and balanced nature of the abstract. -->
+<p>To be finalised as part of manuscrupt.</p>
 </section>
 <section id="analysis-introduction" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Analysis Introduction:</h1>
 <!--# Critically assess the justification for conducting the observational study. -->
-<p>The rationale for the study and justification can be found in the viability reports conducted prior to initiation.</p>
-<p>Question check -</p>
-<p>Viability report -</p>
-<p>Study plan -</p>
+<p>The rationale for the study and justification can be found in the viability reports conducted prior to project initiation.</p>
+<p><a href="https://drive.google.com/file/d/1vIp_AYjzyQMkcG_Rrls5xwsWbneqa_Um/view?usp=sharing">Question check</a></p>
+<p><a href="https://drive.google.com/file/d/1mLIpGySYhgs5TyZgcXerXtp7UTiGhSjr/view?usp=sharing">Study plan</a></p>
 <section id="analysis-preparation" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="analysis-preparation"><span class="header-section-number">1.1</span> Analysis Preparation</h2>
-<p>Load up required packages in advance; check if packages are installed, if not, install them. Citations applied to each library at first use in the text.</p>
+<p>Required packages were loaded in advance using the <em>pacman</em> package (v0.5.1) <span class="citation" data-cites="pacman">(<a href="#ref-pacman" role="doc-biblioref">Rinker and Kurkiewicz 2018</a>)</span>; check if packages are installed, if not, install them. Citations applied to each library at first use in the text.</p>
 </section>
 <section id="authorisations" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="authorisations"><span class="header-section-number">1.2</span> Authorisations</h2>
-<p>Pre-authorise access to registry datasets using the <em>gargle</em> package (v1.5.2) <span class="citation" data-cites="gargle">(<a href="#ref-gargle" role="doc-biblioref">Bryan, Citro, and Wickham 2023</a>)</span>.</p>
+<p>Access to study assets were pre-authorised using the <em>gargle</em> package (v1.5.2) <span class="citation" data-cites="gargle">(<a href="#ref-gargle" role="doc-biblioref">Bryan, Citro, and Wickham 2023</a>)</span> and <em>googledrive</em> (v2.1.1) <span class="citation" data-cites="googledrive">(<a href="#ref-googledrive" role="doc-biblioref">D’Agostino McGowan and Bryan 2023</a>)</span>.</p>
 </section>
-<section id="functions" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="functions"><span class="header-section-number">1.3</span> Functions</h2>
-<p>Include a series of functions to call later in the file for processing data imports.</p>
-</section>
-<section id="strobe-2-background" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="strobe-2-background"><span class="header-section-number">1.4</span> STROBE [2] Background</h2>
+<section id="strobe-2-background" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="strobe-2-background"><span class="header-section-number">1.3</span> STROBE [2] Background</h2>
 <!--# Provide a critical analysis of the background information on the research question or problem. -->
 <p>The introduction is not yet fully drafted.</p>
 </section>
-<section id="strobe-3-objectives" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="strobe-3-objectives"><span class="header-section-number">1.5</span> STROBE [3] Objectives</h2>
+<section id="strobe-3-objectives" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="strobe-3-objectives"><span class="header-section-number">1.4</span> STROBE [3] Objectives</h2>
 <!--# Evaluate the clarity and significance of the study's objectives and hypotheses. -->
 <p>We sought to characterise the rate of patient reported urinary complications, and patient satisfaction with urinary management following elective hip and knee arthroplasty. Our secondary aim was to identify the patient and surgical factors predicting the incidence and severity of urinary complications following lower limb arthroplasty.</p>
 <p>The study objectives have evolved over time. The original study question as per the study plan was the following;</p>
@@ -309,8 +340,8 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
-<section id="hypotheses" class="level3" data-number="1.5.1">
-<h3 data-number="1.5.1" class="anchored" data-anchor-id="hypotheses"><span class="header-section-number">1.5.1</span> Hypotheses</h3>
+<section id="hypotheses" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="hypotheses"><span class="header-section-number">1.4.1</span> Hypotheses</h3>
 <table class="table">
 <caption>Table 2: Study hypotheses for present analysis</caption>
 <colgroup>
@@ -362,7 +393,7 @@ div.csl-indent {
 <section id="strobe-4-study-design" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="strobe-4-study-design"><span class="header-section-number">2.1</span> STROBE [4] Study Design:</h2>
 <!--# Critically evaluate the appropriateness of the chosen observational study design (e.g., cohort, case-control). -->
-<p>Observational cohort study embedded into a department clinical quality registry for lower limb arthroplasty (SHARKS).</p>
+<p>Observational cohort study embedded into a department clinical quality registry for lower limb arthroplasty (SHARKS), with pre-post assessment of patient-reported outcomes.</p>
 </section>
 <section id="strobe-5-setting" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="strobe-5-setting"><span class="header-section-number">2.2</span> STROBE [5] Setting:</h2>
@@ -371,84 +402,135 @@ div.csl-indent {
 </section>
 <section id="strobe-6-participants" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="strobe-6-participants"><span class="header-section-number">2.3</span> STROBE [6] Participants:</h2>
-<p><em>Critique the definition of the study population, including inclusion and exclusion criteria.</em></p>
+<!--# Critique the definition of the study population, including inclusion and exclusion criteria. -->
+<p>Patients were approached to participate if they were booked to undergoing primary lower limb total joint arthroplasty (hip or knee) within the orthopaedic department and were presenting for preoperative anaesthetic workup between November 2020 and June 2023 under the care of a surgeon contributing to the department registry (SHARKS).</p>
+<p>Patients were excluded for the following reasons</p>
+<ul>
+<li><p>Underwent surgery for different condition</p></li>
+<li><p>Surgery was not primary</p></li>
+<li><p>Surgery did not go ahead as planned (not rescheduled within recruitment time period) | removed from surgery wait list</p></li>
+<li><p>Comorbidity specific to the urinary system</p></li>
+<li><p>Underwent surgery under the care of a consultant not contributing to the registry</p></li>
+<li><p>Did not possess adequate English skills to answer the PROMs</p></li>
+</ul>
 </section>
 <section id="strobe-7-variables" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="strobe-7-variables"><span class="header-section-number">2.4</span> STROBE [7] Variables:</h2>
 <!--# Evaluate the choice of exposure, outcome, and confounding variables. -->
-<p>A <a href="https://docs.google.com/spreadsheets/d/1x3LChn3Zh7qPkVQ4rRM0MyjdpfpR-myoZp7oAkq_fKc/edit?usp=sharing" title="Study core dataset">core dataset</a> for the study was derived a-priori.</p>
-<section id="outcomes" class="level3" data-number="2.4.1">
-<h3 data-number="2.4.1" class="anchored" data-anchor-id="outcomes"><span class="header-section-number">2.4.1</span> Outcome(s)</h3>
-<p>The study outcomes were centred on the core lower urinary tract symptom score (CLSS).</p>
+<p>Before the commencement of data collection, a <a href="https://docs.google.com/spreadsheets/d/1x3LChn3Zh7qPkVQ4rRM0MyjdpfpR-myoZp7oAkq_fKc/edit?usp=sharing" title="Study core dataset">core dataset</a> for the study was derived and agreed to by the project investigators to establish the key variables for the study.</p>
+<section id="exposure" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="exposure"><span class="header-section-number">2.4.1</span> Exposure</h3>
+<p>The primary exposure variable was the status of in-dwelling catheterisation prior to the arthroplasty procedure (<em>preemptive IDC</em>). Patients were pre-emptively catheterised based on the preference of the treating surgeon in collaboration with the attending anaesthetist.</p>
+<p>The secondary exposure variable was the status of in-dwelling catheterisation as a treatment for <em>postoperative urinary retention</em> (POUR) detected immediately after the arthroplasty procedure.</p>
+<p>POUR was defined clinically by the treating consultant in collaboration with the shift nursing staff.</p>
+</section>
+<section id="outcomes" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="outcomes"><span class="header-section-number">2.4.2</span> Outcome(s)</h3>
+<p>The primary outcome was the total score derived from the core lower urinary tract symptom score (CLSS) <span class="citation" data-cites="homma2008">(<a href="#ref-homma2008" role="doc-biblioref">Homma et al. 2008</a>)</span>. The CLSS is a 11-question self-reported questionnaire that provides overall assessment of relevant symptoms of the lower urinary tract.</p>
+</section>
+<section id="model-covariates" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="model-covariates"><span class="header-section-number">2.4.3</span> Model Covariates</h3>
 </section>
 </section>
 <section id="strobe-8-data-sourcesmeasurement" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="strobe-8-data-sourcesmeasurement"><span class="header-section-number">2.5</span> STROBE [8] Data Sources/Measurement:</h2>
+<h2 data-number="2.5" class="anchored" data-anchor-id="strobe-8-data-sourcesmeasurement"><span class="header-section-number">2.5</span> STROBE [8] Data Sources/Measurement</h2>
+<p>Data for the study were retrieved in the first instance to a cloud-based file (Sheets, Google LLC, USA). A web-based form (Forms, Google LLC, USA) was generated to recreate It comprised the following tables;</p>
+<ul>
+<li><p>MasterSheet</p></li>
+<li></li>
+</ul>
 <section id="data-import-and-preparation" class="level3" data-number="2.5.1">
 <h3 data-number="2.5.1" class="anchored" data-anchor-id="data-import-and-preparation"><span class="header-section-number">2.5.1</span> Data Import and Preparation</h3>
-<p>Retrieve and format data from live tables and registry snapshot. Using <em>openxlsx</em> (openxlsx2 1.13 2025-02-15 16:20:02 UTC C:/Users/cscho/AppData/Local/R/win-library/4.4) <span class="citation" data-cites="openxlsx2">(<a href="#ref-openxlsx2" role="doc-biblioref">Barbone and Garbuszus 2024</a>)</span> to retrieve static snapshot files and <em>googlesheets4</em> (googlesheets4 1.1.1 2023-06-11 04:00:02 UTC C:/Users/cscho/AppData/Local/R/win-library/4.4) <span class="citation" data-cites="googlesheets4">(<a href="#ref-googlesheets4" role="doc-biblioref">Bryan 2023</a>)</span> to retrieve live database tables.</p>
-<p><em>Prepare analysis dataset</em></p>
-<p><em>Convert PROMS to long dataset</em></p>
-<p><em>Establish model input dataset</em></p>
+<p>Data was retrieved from the live study file using <em>googlesheets4</em> (googlesheets4 1.1.1 2023-06-11 04:00:02 UTC C:/Users/cscho/AppData/Local/R/win-library/4.4) <span class="citation" data-cites="googlesheets4">(<a href="#ref-googlesheets4" role="doc-biblioref">Bryan 2023</a>)</span>.</p>
+<p>The imported tables were reorganised to create STROBE flowchart using <em>tidyverse</em> (tidyverse 2.0.0 2023-02-22 09:20:06 UTC C:/Users/cscho/AppData/Local/R/win-library/4.4) <span class="citation" data-cites="tidyverse">(<a href="#ref-tidyverse" role="doc-biblioref">Wickham et al. 2019</a>)</span>. The <em>stringr</em> package (stringr 1.5.1 2023-11-14 23:10:02 UTC C:/Users/cscho/AppData/Local/R/win-library/4.4) <span class="citation" data-cites="stringr">(<a href="#ref-stringr" role="doc-biblioref">Wickham 2023b</a>)</span> was used to recode new variables.</p>
+<p>Further manipulations were performed using <em>tidyverse</em> to clean the data for input into a recruitment flowchart <span class="citation" data-cites="Vandenbroucke2007">(<a href="#ref-Vandenbroucke2007" role="doc-biblioref">Vandenbroucke et al. 2007</a>)</span>.</p>
+<p>The master dataset was converted to <em>long</em> format using <em>tidyr</em> (tidyr 1.3.1 2024-01-24 14:50:09 UTC C:/Users/cscho/AppData/Local/R/win-library/4.4) <span class="citation" data-cites="tidyr">(<a href="#ref-tidyr" role="doc-biblioref">Wickham, Vaughan, and Girlich 2024</a>)</span> to enable plotting of PROMs data between pre and post arthroplasty timepoints.</p>
+<p>The data were further refined for input into regression models by handling the numeric and character data types separately. The <em>forcats</em> package (forcats 1.0.0 2023-01-29 22:20:02 UTC C:/Users/cscho/AppData/Local/R/win-library/4.4) <span class="citation" data-cites="forcats">(<a href="#ref-forcats" role="doc-biblioref">Wickham 2023a</a>)</span> was used to convert character columns to factors.</p>
+<p>The master dataset was sliced down to the minimal inputs required for model generation.</p>
 </section>
 </section>
 <section id="strobe-9-bias" class="level2" data-number="2.6">
 <h2 data-number="2.6" class="anchored" data-anchor-id="strobe-9-bias"><span class="header-section-number">2.6</span> STROBE [9] Bias:</h2>
 <!--# Critically analyze potential sources of bias and the adequacy of methods used to address them. -->
+<p>Retrospective cohort analyses are subject to a number of biases as noted by <span class="citation" data-cites="sedgwick2014">(<a href="#ref-sedgwick2014" role="doc-biblioref">Sedgwick 2014</a>)</span>. Specific to this analysis, the following considerations are noted below.</p>
+<p>Table 9: Biases in analysis of an observational cohort.</p>
+<table class="table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 30%">
+<col style="width: 8%">
+<col style="width: 54%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Bias</th>
+<th>Definition</th>
+<th>Source</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Selection</td>
+<td>Patient recruitment is such that the sample becomes unrepresentative of population</td>
+<td><span class="citation" data-cites="sedgwick2014">(<a href="#ref-sedgwick2014" role="doc-biblioref">Sedgwick 2014</a>)</span></td>
+<td><p>The SHARKS registry represents ~70% of cases performed in the department. All patients eligible for recruitment during the recruitment period were approached for consent.</p>
+<p>The proportion of non-english speaking patients in the hospital population remains unmitigated as a source of bias</p></td>
+</tr>
+<tr class="even">
+<td>Information bias</td>
+<td>Patient responses are systematically different from reality</td>
+<td><span class="citation" data-cites="sedgwick2014">(<a href="#ref-sedgwick2014" role="doc-biblioref">Sedgwick 2014</a>)</span></td>
+<td><p>Considering the subject matter and the method of PROMs collection, information bias cannot be fully mitigated in this sample.</p>
+<p>Optimism correction was simulated as part of sensitivity analysis to investigate the potential of this source of bias</p></td>
+</tr>
+<tr class="odd">
+<td>Confounder</td>
+<td>A variable of interest and a target outcome simultaneously influenced by a third variable</td>
+<td><span class="citation" data-cites="tennant2020">(<a href="#ref-tennant2020" role="doc-biblioref">Tennant et al. 2020</a>)</span></td>
+<td>Regression models were used to adjust models for estimated confounders identified through minimal adjustment sets using directed acyclic graphs.</td>
+</tr>
+<tr class="even">
+<td>Missing data</td>
+<td>The absence of a data value where a treatment record is eligible to have a data value collected</td>
+<td><span class="citation" data-cites="carroll2020">(<a href="#ref-carroll2020" role="doc-biblioref">Carroll, Morris, and Keogh 2020</a>)</span></td>
+<td>Missingness in PROMs date was addressed with multiple imputation (see Missing Data)</td>
+</tr>
+<tr class="odd">
+<td>Pseudoreplication</td>
+<td>Analyse data while ignoring dependency between observations. Inadequate model specification.</td>
+<td><span class="citation" data-cites="davies2015 lazic2010">(<a href="#ref-davies2015" role="doc-biblioref">Davies and Gray 2015</a>; <a href="#ref-lazic2010" role="doc-biblioref">Lazic 2010</a>)</span></td>
+<td>Used mixed effects linear model for procedure duration with patient identifier as random effect. Cluster for patient in survival (all-cause failure and retear).</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="missing-data" class="level2" data-number="2.7">
 <h2 data-number="2.7" class="anchored" data-anchor-id="missing-data"><span class="header-section-number">2.7</span> Missing Data</h2>
-</section>
-<section id="strobe-10-study-size" class="level2" data-number="2.8">
-<h2 data-number="2.8" class="anchored" data-anchor-id="strobe-10-study-size"><span class="header-section-number">2.8</span> STROBE [10] Study size:</h2>
-<!--# *Critically analyze the final study sample and the rationale/methods used for its justification.* -->
-</section>
-<section id="strobe-11-quantitative-variables" class="level2" data-number="2.9">
-<h2 data-number="2.9" class="anchored" data-anchor-id="strobe-11-quantitative-variables"><span class="header-section-number">2.9</span> STROBE [11] Quantitative variables:</h2>
-<!--# *Evaluate the analytical choices of the quantitative variables within the dataset.* -->
-</section>
-<section id="strobe-12-statistical-methods" class="level2" data-number="2.10">
-<h2 data-number="2.10" class="anchored" data-anchor-id="strobe-12-statistical-methods"><span class="header-section-number">2.10</span> STROBE [12] Statistical Methods:</h2>
-<!--# *Evaluate the appropriateness and robustness of the statistical techniques used for analysis.* -->
-</section>
-</section>
-<section id="results" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Results:</h1>
-<section id="strobe-13-participant-flow" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="strobe-13-participant-flow"><span class="header-section-number">3.1</span> STROBE [13] Participant Flow:</h2>
-<!--# *Critically assess the transparency and completeness of participant flow reporting.* -->
+<p>Missingness is an unavoidable characteristic of clinical datasets, particularly in a public hospital setting where patients from lower socioeconomic backgrounds are less likely to respond to patient-reported outcome measures in lower limb arthroplasty <span class="citation" data-cites="konopka2023">(<a href="#ref-konopka2023" role="doc-biblioref"><strong>konopka2023?</strong></a>)</span>.</p>
+<section id="assessment" class="level4" data-number="2.7.0.1">
+<h4 data-number="2.7.0.1" class="anchored" data-anchor-id="assessment"><span class="header-section-number">2.7.0.1</span> Assessment</h4>
+<p>The <em>naniar</em> <span class="citation" data-cites="naniar">(<a href="#ref-naniar" role="doc-biblioref">Tierney and Cook 2023</a>)</span> (naniar 1.1.0 2024-03-05 10:10:02 UTC C:/Users/cscho/AppData/Local/R/win-library/4.4) <span class="citation" data-cites="naniar">(<a href="#ref-naniar" role="doc-biblioref">Tierney and Cook 2023</a>)</span> and <em>gt</em> (gt 0.11.1 2024-10-04 20:10:12 UTC C:/Users/cscho/AppData/Local/R/win-library/4.4) packages were used to generate a summary table of missingness CLSSTotal. No other variables relevant to the regression were missing values. Importantly, even though the proportion of missingness is relatively low (&lt;10% for postoperative assessment), this should not be used as a guide with respect to deciding whether to use imputation <span class="citation" data-cites="madley-dowd2019">(<a href="#ref-madley-dowd2019" role="doc-biblioref">Madley-Dowd et al. 2019</a>)</span>.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure">
-<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="strobe-14-descriptive-data" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="strobe-14-descriptive-data"><span class="header-section-number">3.2</span> STROBE [14] Descriptive Data:</h2>
-<!--# *Evaluate the adequacy of the presentation of characteristics of the study population.* -->
-<div class="cell">
-<div class="cell-output-display">
-<div id="xrirlwqtpr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xrirlwqtpr table {
+<div id="uqhtoqhkvx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#uqhtoqhkvx table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xrirlwqtpr thead, #xrirlwqtpr tbody, #xrirlwqtpr tfoot, #xrirlwqtpr tr, #xrirlwqtpr td, #xrirlwqtpr th {
+#uqhtoqhkvx thead, #uqhtoqhkvx tbody, #uqhtoqhkvx tfoot, #uqhtoqhkvx tr, #uqhtoqhkvx td, #uqhtoqhkvx th {
   border-style: none;
 }
 
-#xrirlwqtpr p {
+#uqhtoqhkvx p {
   margin: 0;
   padding: 0;
 }
 
-#xrirlwqtpr .gt_table {
+#uqhtoqhkvx .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -474,12 +556,12 @@ div.csl-indent {
   border-left-color: #D3D3D3;
 }
 
-#xrirlwqtpr .gt_caption {
+#uqhtoqhkvx .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xrirlwqtpr .gt_title {
+#uqhtoqhkvx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -491,7 +573,7 @@ div.csl-indent {
   border-bottom-width: 0;
 }
 
-#xrirlwqtpr .gt_subtitle {
+#uqhtoqhkvx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -503,7 +585,7 @@ div.csl-indent {
   border-top-width: 0;
 }
 
-#xrirlwqtpr .gt_heading {
+#uqhtoqhkvx .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -515,13 +597,13 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#xrirlwqtpr .gt_bottom_border {
+#uqhtoqhkvx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xrirlwqtpr .gt_col_headings {
+#uqhtoqhkvx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -536,7 +618,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#xrirlwqtpr .gt_col_heading {
+#uqhtoqhkvx .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -556,7 +638,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-#xrirlwqtpr .gt_column_spanner_outer {
+#uqhtoqhkvx .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -568,15 +650,15 @@ div.csl-indent {
   padding-right: 4px;
 }
 
-#xrirlwqtpr .gt_column_spanner_outer:first-child {
+#uqhtoqhkvx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xrirlwqtpr .gt_column_spanner_outer:last-child {
+#uqhtoqhkvx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xrirlwqtpr .gt_column_spanner {
+#uqhtoqhkvx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -588,11 +670,11 @@ div.csl-indent {
   width: 100%;
 }
 
-#xrirlwqtpr .gt_spanner_row {
+#uqhtoqhkvx .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xrirlwqtpr .gt_group_heading {
+#uqhtoqhkvx .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -618,7 +700,7 @@ div.csl-indent {
   text-align: left;
 }
 
-#xrirlwqtpr .gt_empty_group_heading {
+#uqhtoqhkvx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -633,15 +715,15 @@ div.csl-indent {
   vertical-align: middle;
 }
 
-#xrirlwqtpr .gt_from_md > :first-child {
+#uqhtoqhkvx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xrirlwqtpr .gt_from_md > :last-child {
+#uqhtoqhkvx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xrirlwqtpr .gt_row {
+#uqhtoqhkvx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -660,7 +742,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-#xrirlwqtpr .gt_stub {
+#uqhtoqhkvx .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -673,7 +755,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#xrirlwqtpr .gt_stub_row_group {
+#uqhtoqhkvx .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -687,15 +769,15 @@ div.csl-indent {
   vertical-align: top;
 }
 
-#xrirlwqtpr .gt_row_group_first td {
+#uqhtoqhkvx .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xrirlwqtpr .gt_row_group_first th {
+#uqhtoqhkvx .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xrirlwqtpr .gt_summary_row {
+#uqhtoqhkvx .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -705,16 +787,16 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#xrirlwqtpr .gt_first_summary_row {
+#uqhtoqhkvx .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xrirlwqtpr .gt_first_summary_row.thick {
+#uqhtoqhkvx .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xrirlwqtpr .gt_last_summary_row {
+#uqhtoqhkvx .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -724,7 +806,7 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#xrirlwqtpr .gt_grand_summary_row {
+#uqhtoqhkvx .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -734,7 +816,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#xrirlwqtpr .gt_first_grand_summary_row {
+#uqhtoqhkvx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -744,7 +826,7 @@ div.csl-indent {
   border-top-color: #D3D3D3;
 }
 
-#xrirlwqtpr .gt_last_grand_summary_row_top {
+#uqhtoqhkvx .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -754,11 +836,11 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#xrirlwqtpr .gt_striped {
+#uqhtoqhkvx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xrirlwqtpr .gt_table_body {
+#uqhtoqhkvx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -767,7 +849,7 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#xrirlwqtpr .gt_footnotes {
+#uqhtoqhkvx .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -781,7 +863,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#xrirlwqtpr .gt_footnote {
+#uqhtoqhkvx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -790,7 +872,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#xrirlwqtpr .gt_sourcenotes {
+#uqhtoqhkvx .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -804,7 +886,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#xrirlwqtpr .gt_sourcenote {
+#uqhtoqhkvx .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -812,72 +894,653 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#xrirlwqtpr .gt_left {
+#uqhtoqhkvx .gt_left {
   text-align: left;
 }
 
-#xrirlwqtpr .gt_center {
+#uqhtoqhkvx .gt_center {
   text-align: center;
 }
 
-#xrirlwqtpr .gt_right {
+#uqhtoqhkvx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xrirlwqtpr .gt_font_normal {
+#uqhtoqhkvx .gt_font_normal {
   font-weight: normal;
 }
 
-#xrirlwqtpr .gt_font_bold {
+#uqhtoqhkvx .gt_font_bold {
   font-weight: bold;
 }
 
-#xrirlwqtpr .gt_font_italic {
+#uqhtoqhkvx .gt_font_italic {
   font-style: italic;
 }
 
-#xrirlwqtpr .gt_super {
+#uqhtoqhkvx .gt_super {
   font-size: 65%;
 }
 
-#xrirlwqtpr .gt_footnote_marks {
+#uqhtoqhkvx .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xrirlwqtpr .gt_asterisk {
+#uqhtoqhkvx .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xrirlwqtpr .gt_indent_1 {
+#uqhtoqhkvx .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xrirlwqtpr .gt_indent_2 {
+#uqhtoqhkvx .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xrirlwqtpr .gt_indent_3 {
+#uqhtoqhkvx .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xrirlwqtpr .gt_indent_4 {
+#uqhtoqhkvx .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xrirlwqtpr .gt_indent_5 {
+#uqhtoqhkvx .gt_indent_5 {
   text-indent: 25px;
 }
 
-#xrirlwqtpr .katex-display {
+#uqhtoqhkvx .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#xrirlwqtpr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#uqhtoqhkvx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="n_miss_in_case" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">n_miss_in_case</th>
+<th id="n_cases" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">n_cases</th>
+<th id="pct_cases" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">pct_cases</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd gt_group_heading_row">
+<td colspan="3" id="Pre" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Pre</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_right" headers="Pre  n_miss_in_case">0</td>
+<td class="gt_row gt_right" headers="Pre  n_cases">284</td>
+<td class="gt_row gt_right" headers="Pre  pct_cases">99.30</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Pre  n_miss_in_case">1</td>
+<td class="gt_row gt_right" headers="Pre  n_cases">2</td>
+<td class="gt_row gt_right" headers="Pre  pct_cases">0.70</td>
+</tr>
+<tr class="even gt_group_heading_row">
+<td colspan="3" id="Post" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">Post</td>
+</tr>
+<tr class="odd gt_row_group_first">
+<td class="gt_row gt_right" headers="Post  n_miss_in_case">0</td>
+<td class="gt_row gt_right" headers="Post  n_cases">261</td>
+<td class="gt_row gt_right" headers="Post  pct_cases">91.26</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Post  n_miss_in_case">1</td>
+<td class="gt_row gt_right" headers="Post  n_cases">25</td>
+<td class="gt_row gt_right" headers="Post  pct_cases">8.74</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="management" class="level4" data-number="2.7.0.2">
+<h4 data-number="2.7.0.2" class="anchored" data-anchor-id="management"><span class="header-section-number">2.7.0.2</span> Management</h4>
+<p>Multiple imputation under the assumption of <em>missing at random</em> as described in <span class="citation" data-cites="cro2020">(<a href="#ref-cro2020" role="doc-biblioref">Cro et al. 2020</a>)</span>. The <em>mice</em> (v3.17.0) <span class="citation" data-cites="mice">(<a href="#ref-mice" role="doc-biblioref">Buuren and Groothuis-Oudshoorn 2011</a>)</span> was used to impute the dataset.</p>
+<p>A strip plot (Figure 3) were used to visually inspect the convergence of the imputation iterations against the original dataset.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="UrinaryComplicationsQ_files/figure-html/Strip%20Plot-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Figure 3: Strip plot of imputed data over 5 iterations with 20 imputations per iteration.</p>
+<p>The estimated PCS-SF total score from the imputation model versus the distribution of the observed PCS-SF was plotted as a visual inspection of the imputation result (Figure 4).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Figure 4. Estimated versus observed CLSS Total for the analysis cohort.</p>
+</section>
+</section>
+<section id="strobe-10-study-size" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="strobe-10-study-size"><span class="header-section-number">2.8</span> STROBE [10] Study size:</h2>
+<!--# *Critically analyze the final study sample and the rationale/methods used for its justification.* -->
+<p>The original study sample calculation (Study Plan) estimated that <em>330</em> cases would be required to answer Question 1.</p>
+<p>Due to delays associated with elective surgery restrictions as part of COVID19 mitigation strategies and rotation of key personnel associated with the study away from the hospital, the sample was restricted to <code>nrow(MasterFilter)</code>. The <em>pwrss</em> package (v0.3.1) <span class="citation" data-cites="pwrss">(<a href="#ref-pwrss" role="doc-biblioref">Bulus 2023</a>)</span> was used to estimate the power available for the intended regression model to answer Question 2 under the following assumptions.</p>
+<ul>
+<li><p>Effect size = small</p></li>
+<li><p>Factor levels = 2</p></li>
+<li><p>Covariates = 4 (see data model)</p></li>
+<li><p>n = 286</p></li>
+</ul>
+<div class="cell">
+<p>Power for the 2-group comparison was 0.84.</p>
+<p>The available sample size should be sufficient to answer the question posed, under the assumptions of the data model proposed here.</p>
+</div>
+</section>
+<section id="strobe-11-quantitative-variables" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="strobe-11-quantitative-variables"><span class="header-section-number">2.9</span> STROBE [11] Quantitative variables:</h2>
+<!--# *Evaluate the analytical choices of the quantitative variables within the dataset.* -->
+<p>To answer Question 1, a minimal clinically important difference is required for the CLSS. In the original study protocol, a 2-point difference was put forward as a difference sufficient to represent clinically meaningful change in the CLSS Total score (~10%).</p>
+</section>
+<section id="strobe-12-statistical-methods" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="strobe-12-statistical-methods"><span class="header-section-number">2.10</span> STROBE [12] Statistical Methods:</h2>
+<!--# *Evaluate the appropriateness and robustness of the statistical techniques used for analysis.* -->
+<p>The participant flow chart was generated using the <em>consort</em> package (see STROBE 8).</p>
+<p>Baseline data was compared between groups of preemptive IDC (Yes | No) using student t-test for continuous variables and fisher exact test (binary categorical) or chi-square test (categorical with &gt;2 categories) with correction for ties. Correction for multiple comparisons was implemented with the <em>Holm</em> method using the <em>gtsummary</em> package (v2.1.0) <span class="citation" data-cites="gtsummary">(<a href="#ref-gtsummary" role="doc-biblioref">Sjoberg et al. 2021</a>)</span>.</p>
+<p>Complete case analysis of the CLSS Total involved an unadjusted comparison between pre and post scores using a paired t-test.</p>
+<p>A linear model was fitted to the imputed data using <em>stats</em> (v4.4.2) <span class="citation" data-cites="stats">(<a href="#ref-stats" role="doc-biblioref">2022</a>)</span> with the following form.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>CLSSMod <span class="ot">&lt;-</span> <span class="fu">with</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  MasterImp, </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">exp =</span> <span class="fu">lm</span>(PostCLSS <span class="sc">~</span> PreIDC <span class="sc">+</span> BaseCLSS <span class="sc">+</span> Bilateral <span class="sc">+</span> Sex <span class="sc">+</span> AgeAtSurgery)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>The model was summarised using <em>gtsummary</em>. Predicted values for all model variables were generated from the model object using <em>marginaleffects</em> (v0.25.0) <span class="citation" data-cites="marginaleffects">(<a href="#ref-marginaleffects" role="doc-biblioref">Arel-Bundock 2024</a>)</span>.</p>
+</section>
+</section>
+<section id="results" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Results:</h1>
+<section id="strobe-13-participant-flow" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="strobe-13-participant-flow"><span class="header-section-number">3.1</span> STROBE [13] Participant Flow:</h2>
+<!--# *Critically assess the transparency and completeness of participant flow reporting.* -->
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="strobe-14-descriptive-data" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="strobe-14-descriptive-data"><span class="header-section-number">3.2</span> STROBE [14] Descriptive Data:</h2>
+<!--# *Evaluate the adequacy of the presentation of characteristics of the study population.* -->
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div id="qbslfaqspk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qbslfaqspk table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#qbslfaqspk thead, #qbslfaqspk tbody, #qbslfaqspk tfoot, #qbslfaqspk tr, #qbslfaqspk td, #qbslfaqspk th {
+  border-style: none;
+}
+
+#qbslfaqspk p {
+  margin: 0;
+  padding: 0;
+}
+
+#qbslfaqspk .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#qbslfaqspk .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#qbslfaqspk .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#qbslfaqspk .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#qbslfaqspk .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#qbslfaqspk .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qbslfaqspk .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#qbslfaqspk .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#qbslfaqspk .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#qbslfaqspk .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#qbslfaqspk .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#qbslfaqspk .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#qbslfaqspk .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#qbslfaqspk .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#qbslfaqspk .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#qbslfaqspk .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#qbslfaqspk .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#qbslfaqspk .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#qbslfaqspk .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qbslfaqspk .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#qbslfaqspk .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#qbslfaqspk .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#qbslfaqspk .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qbslfaqspk .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#qbslfaqspk .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#qbslfaqspk .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qbslfaqspk .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qbslfaqspk .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#qbslfaqspk .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qbslfaqspk .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#qbslfaqspk .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qbslfaqspk .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#qbslfaqspk .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qbslfaqspk .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#qbslfaqspk .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qbslfaqspk .gt_left {
+  text-align: left;
+}
+
+#qbslfaqspk .gt_center {
+  text-align: center;
+}
+
+#qbslfaqspk .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#qbslfaqspk .gt_font_normal {
+  font-weight: normal;
+}
+
+#qbslfaqspk .gt_font_bold {
+  font-weight: bold;
+}
+
+#qbslfaqspk .gt_font_italic {
+  font-style: italic;
+}
+
+#qbslfaqspk .gt_super {
+  font-size: 65%;
+}
+
+#qbslfaqspk .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#qbslfaqspk .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#qbslfaqspk .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#qbslfaqspk .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#qbslfaqspk .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#qbslfaqspk .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#qbslfaqspk .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#qbslfaqspk .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#qbslfaqspk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1009,25 +1672,26 @@ div.csl-indent {
 </div>
 </div>
 </div>
+</div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="mgmkyiqovt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#mgmkyiqovt table {
+<div id="okgzgiqmnv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#okgzgiqmnv table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#mgmkyiqovt thead, #mgmkyiqovt tbody, #mgmkyiqovt tfoot, #mgmkyiqovt tr, #mgmkyiqovt td, #mgmkyiqovt th {
+#okgzgiqmnv thead, #okgzgiqmnv tbody, #okgzgiqmnv tfoot, #okgzgiqmnv tr, #okgzgiqmnv td, #okgzgiqmnv th {
   border-style: none;
 }
 
-#mgmkyiqovt p {
+#okgzgiqmnv p {
   margin: 0;
   padding: 0;
 }
 
-#mgmkyiqovt .gt_table {
+#okgzgiqmnv .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1053,12 +1717,12 @@ div.csl-indent {
   border-left-color: #D3D3D3;
 }
 
-#mgmkyiqovt .gt_caption {
+#okgzgiqmnv .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#mgmkyiqovt .gt_title {
+#okgzgiqmnv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1070,7 +1734,7 @@ div.csl-indent {
   border-bottom-width: 0;
 }
 
-#mgmkyiqovt .gt_subtitle {
+#okgzgiqmnv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1082,7 +1746,7 @@ div.csl-indent {
   border-top-width: 0;
 }
 
-#mgmkyiqovt .gt_heading {
+#okgzgiqmnv .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1094,13 +1758,13 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#mgmkyiqovt .gt_bottom_border {
+#okgzgiqmnv .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mgmkyiqovt .gt_col_headings {
+#okgzgiqmnv .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1115,7 +1779,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#mgmkyiqovt .gt_col_heading {
+#okgzgiqmnv .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1135,7 +1799,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-#mgmkyiqovt .gt_column_spanner_outer {
+#okgzgiqmnv .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1147,15 +1811,15 @@ div.csl-indent {
   padding-right: 4px;
 }
 
-#mgmkyiqovt .gt_column_spanner_outer:first-child {
+#okgzgiqmnv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mgmkyiqovt .gt_column_spanner_outer:last-child {
+#okgzgiqmnv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mgmkyiqovt .gt_column_spanner {
+#okgzgiqmnv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1167,11 +1831,11 @@ div.csl-indent {
   width: 100%;
 }
 
-#mgmkyiqovt .gt_spanner_row {
+#okgzgiqmnv .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#mgmkyiqovt .gt_group_heading {
+#okgzgiqmnv .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1197,7 +1861,7 @@ div.csl-indent {
   text-align: left;
 }
 
-#mgmkyiqovt .gt_empty_group_heading {
+#okgzgiqmnv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1212,15 +1876,15 @@ div.csl-indent {
   vertical-align: middle;
 }
 
-#mgmkyiqovt .gt_from_md > :first-child {
+#okgzgiqmnv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mgmkyiqovt .gt_from_md > :last-child {
+#okgzgiqmnv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mgmkyiqovt .gt_row {
+#okgzgiqmnv .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1239,7 +1903,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-#mgmkyiqovt .gt_stub {
+#okgzgiqmnv .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1252,7 +1916,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#mgmkyiqovt .gt_stub_row_group {
+#okgzgiqmnv .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1266,15 +1930,15 @@ div.csl-indent {
   vertical-align: top;
 }
 
-#mgmkyiqovt .gt_row_group_first td {
+#okgzgiqmnv .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#mgmkyiqovt .gt_row_group_first th {
+#okgzgiqmnv .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#mgmkyiqovt .gt_summary_row {
+#okgzgiqmnv .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1284,16 +1948,16 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#mgmkyiqovt .gt_first_summary_row {
+#okgzgiqmnv .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#mgmkyiqovt .gt_first_summary_row.thick {
+#okgzgiqmnv .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#mgmkyiqovt .gt_last_summary_row {
+#okgzgiqmnv .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1303,7 +1967,7 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#mgmkyiqovt .gt_grand_summary_row {
+#okgzgiqmnv .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1313,7 +1977,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#mgmkyiqovt .gt_first_grand_summary_row {
+#okgzgiqmnv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1323,7 +1987,7 @@ div.csl-indent {
   border-top-color: #D3D3D3;
 }
 
-#mgmkyiqovt .gt_last_grand_summary_row_top {
+#okgzgiqmnv .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1333,11 +1997,11 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#mgmkyiqovt .gt_striped {
+#okgzgiqmnv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#mgmkyiqovt .gt_table_body {
+#okgzgiqmnv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1346,7 +2010,7 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#mgmkyiqovt .gt_footnotes {
+#okgzgiqmnv .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1360,7 +2024,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#mgmkyiqovt .gt_footnote {
+#okgzgiqmnv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1369,7 +2033,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#mgmkyiqovt .gt_sourcenotes {
+#okgzgiqmnv .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1383,7 +2047,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#mgmkyiqovt .gt_sourcenote {
+#okgzgiqmnv .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1391,443 +2055,345 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#mgmkyiqovt .gt_left {
+#okgzgiqmnv .gt_left {
   text-align: left;
 }
 
-#mgmkyiqovt .gt_center {
+#okgzgiqmnv .gt_center {
   text-align: center;
 }
 
-#mgmkyiqovt .gt_right {
+#okgzgiqmnv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mgmkyiqovt .gt_font_normal {
+#okgzgiqmnv .gt_font_normal {
   font-weight: normal;
 }
 
-#mgmkyiqovt .gt_font_bold {
+#okgzgiqmnv .gt_font_bold {
   font-weight: bold;
 }
 
-#mgmkyiqovt .gt_font_italic {
+#okgzgiqmnv .gt_font_italic {
   font-style: italic;
 }
 
-#mgmkyiqovt .gt_super {
+#okgzgiqmnv .gt_super {
   font-size: 65%;
 }
 
-#mgmkyiqovt .gt_footnote_marks {
+#okgzgiqmnv .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#mgmkyiqovt .gt_asterisk {
+#okgzgiqmnv .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#mgmkyiqovt .gt_indent_1 {
+#okgzgiqmnv .gt_indent_1 {
   text-indent: 5px;
 }
 
-#mgmkyiqovt .gt_indent_2 {
+#okgzgiqmnv .gt_indent_2 {
   text-indent: 10px;
 }
 
-#mgmkyiqovt .gt_indent_3 {
+#okgzgiqmnv .gt_indent_3 {
   text-indent: 15px;
 }
 
-#mgmkyiqovt .gt_indent_4 {
+#okgzgiqmnv .gt_indent_4 {
   text-indent: 20px;
 }
 
-#mgmkyiqovt .gt_indent_5 {
+#okgzgiqmnv .gt_indent_5 {
   text-indent: 25px;
 }
 
-#mgmkyiqovt .katex-display {
+#okgzgiqmnv .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#mgmkyiqovt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#okgzgiqmnv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
-
-<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-<colgroup>
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-</colgroup>
-<thead>
-<tr class="header gt_col_headings">
-<th id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Characteristic</strong></th>
-<th id="stat_0" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Overall</strong><br> N = 286<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
-<th id="ci_stat_0" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>95% CI</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span></th>
-<th id="stat_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>No</strong><br> N = 174<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
-<th id="ci_stat_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>95% CI</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span></th>
-<th id="stat_2" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Yes</strong><br> N = 112<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
-<th id="ci_stat_2" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>95% CI</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span></th>
-<th id="p.value" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>p-value</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>3</sup></span></th>
-<th id="q.value" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>q-value</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>4</sup></span></th>
-</tr>
-</thead>
-<tbody class="gt_table_body">
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">Age at surgery</td>
-<td class="gt_row gt_center" headers="stat_0">69.4 (9.3)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">68 - 70</td>
-<td class="gt_row gt_center" headers="stat_1">69.5 (9.0)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">68 - 71</td>
-<td class="gt_row gt_center" headers="stat_2">69.3 (9.9)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">67 - 71</td>
-<td class="gt_row gt_center" headers="p.value">0.7</td>
-<td class="gt_row gt_center" headers="q.value">&gt;0.9</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">BMI</td>
-<td class="gt_row gt_center" headers="stat_0">31.8 (6.2)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">31 - 33</td>
-<td class="gt_row gt_center" headers="stat_1">31.3 (6.0)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">30 - 32</td>
-<td class="gt_row gt_center" headers="stat_2">32.6 (6.4)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">31 - 34</td>
-<td class="gt_row gt_center" headers="p.value">0.056</td>
-<td class="gt_row gt_center" headers="q.value">0.13</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">Sex</td>
-<td class="gt_row gt_center" headers="stat_0">51.7% (148)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">46 - 58</td>
-<td class="gt_row gt_center" headers="stat_1">47.1% (82)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">40 - 55</td>
-<td class="gt_row gt_center" headers="stat_2">58.9% (66)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">49 - 68</td>
-<td class="gt_row gt_center" headers="p.value">0.051</td>
-<td class="gt_row gt_center" headers="q.value">0.13</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">Bilateral</td>
-<td class="gt_row gt_center" headers="stat_0">5.9% (17)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">3.6 - 9.5</td>
-<td class="gt_row gt_center" headers="stat_1">0.0% (0)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">0.00 - 2.7</td>
-<td class="gt_row gt_center" headers="stat_2">15.2% (17)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">9.3 - 23</td>
-<td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
-<td class="gt_row gt_center" headers="q.value">&lt;0.001</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">Joint</td>
-<td class="gt_row gt_center" headers="stat_0"><br>
-</td>
-<td class="gt_row gt_center" headers="ci_stat_0"><br>
-</td>
-<td class="gt_row gt_center" headers="stat_1"><br>
-</td>
-<td class="gt_row gt_center" headers="ci_stat_1"><br>
-</td>
-<td class="gt_row gt_center" headers="stat_2"><br>
-</td>
-<td class="gt_row gt_center" headers="ci_stat_2"><br>
-</td>
-<td class="gt_row gt_center" headers="p.value">&gt;0.9</td>
-<td class="gt_row gt_center" headers="q.value">&gt;0.9</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Hip</td>
-<td class="gt_row gt_center" headers="stat_0">36.0% (103)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">31 - 42</td>
-<td class="gt_row gt_center" headers="stat_1">36.2% (63)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">29 - 44</td>
-<td class="gt_row gt_center" headers="stat_2">35.7% (40)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">27 - 45</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-<td class="gt_row gt_center" headers="q.value"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Knee</td>
-<td class="gt_row gt_center" headers="stat_0">64.0% (183)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">58 - 69</td>
-<td class="gt_row gt_center" headers="stat_1">63.8% (111)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">56 - 71</td>
-<td class="gt_row gt_center" headers="stat_2">64.3% (72)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">55 - 73</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-<td class="gt_row gt_center" headers="q.value"><br>
-</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">Surgeon</td>
-<td class="gt_row gt_center" headers="stat_0"><br>
-</td>
-<td class="gt_row gt_center" headers="ci_stat_0"><br>
-</td>
-<td class="gt_row gt_center" headers="stat_1"><br>
-</td>
-<td class="gt_row gt_center" headers="ci_stat_1"><br>
-</td>
-<td class="gt_row gt_center" headers="stat_2"><br>
-</td>
-<td class="gt_row gt_center" headers="ci_stat_2"><br>
-</td>
-<td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
-<td class="gt_row gt_center" headers="q.value">&lt;0.001</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;A</td>
-<td class="gt_row gt_center" headers="stat_0">23.0% (58)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">18 - 29</td>
-<td class="gt_row gt_center" headers="stat_1">32.4% (46)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">25 - 41</td>
-<td class="gt_row gt_center" headers="stat_2">10.9% (12)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">6.0 - 19</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-<td class="gt_row gt_center" headers="q.value"><br>
-</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;B</td>
-<td class="gt_row gt_center" headers="stat_0">44.8% (113)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">39 - 51</td>
-<td class="gt_row gt_center" headers="stat_1">21.1% (30)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">15 - 29</td>
-<td class="gt_row gt_center" headers="stat_2">75.5% (83)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">66 - 83</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-<td class="gt_row gt_center" headers="q.value"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;C</td>
-<td class="gt_row gt_center" headers="stat_0">3.6% (9)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">1.8 - 6.9</td>
-<td class="gt_row gt_center" headers="stat_1">3.5% (5)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">1.3 - 8.4</td>
-<td class="gt_row gt_center" headers="stat_2">3.6% (4)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">1.2 - 9.6</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-<td class="gt_row gt_center" headers="q.value"><br>
-</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;D</td>
-<td class="gt_row gt_center" headers="stat_0">2.0% (5)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">0.73 - 4.8</td>
-<td class="gt_row gt_center" headers="stat_1">2.8% (4)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">0.91 - 7.5</td>
-<td class="gt_row gt_center" headers="stat_2">0.9% (1)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">0.05 - 5.7</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-<td class="gt_row gt_center" headers="q.value"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;E</td>
-<td class="gt_row gt_center" headers="stat_0">26.2% (66)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">21 - 32</td>
-<td class="gt_row gt_center" headers="stat_1">39.4% (56)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">31 - 48</td>
-<td class="gt_row gt_center" headers="stat_2">9.1% (10)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">4.7 - 16</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-<td class="gt_row gt_center" headers="q.value"><br>
-</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;F</td>
-<td class="gt_row gt_center" headers="stat_0">0.4% (1)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">0.02 - 2.5</td>
-<td class="gt_row gt_center" headers="stat_1">0.7% (1)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">0.04 - 4.4</td>
-<td class="gt_row gt_center" headers="stat_2">0.0% (0)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">0.00 - 4.2</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-<td class="gt_row gt_center" headers="q.value"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
-<td class="gt_row gt_center" headers="stat_0">34</td>
-<td class="gt_row gt_center" headers="ci_stat_0"><br>
-</td>
-<td class="gt_row gt_center" headers="stat_1">32</td>
-<td class="gt_row gt_center" headers="ci_stat_1"><br>
-</td>
-<td class="gt_row gt_center" headers="stat_2">2</td>
-<td class="gt_row gt_center" headers="ci_stat_2"><br>
-</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-<td class="gt_row gt_center" headers="q.value"><br>
-</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">Comorbidities - diabetes</td>
-<td class="gt_row gt_center" headers="stat_0">21.0% (60)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">17 - 26</td>
-<td class="gt_row gt_center" headers="stat_1">18.4% (32)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">13 - 25</td>
-<td class="gt_row gt_center" headers="stat_2">25.0% (28)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">18 - 34</td>
-<td class="gt_row gt_center" headers="p.value">0.2</td>
-<td class="gt_row gt_center" headers="q.value">0.4</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">Comorbidities - cardiovascular</td>
-<td class="gt_row gt_center" headers="stat_0">27.3% (78)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">22 - 33</td>
-<td class="gt_row gt_center" headers="stat_1">29.3% (51)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">23 - 37</td>
-<td class="gt_row gt_center" headers="stat_2">24.1% (27)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">17 - 33</td>
-<td class="gt_row gt_center" headers="p.value">0.3</td>
-<td class="gt_row gt_center" headers="q.value">0.5</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">Comorbidities - neurological</td>
-<td class="gt_row gt_center" headers="stat_0">5.9% (17)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">3.6 - 9.5</td>
-<td class="gt_row gt_center" headers="stat_1">5.7% (10)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">2.9 - 11</td>
-<td class="gt_row gt_center" headers="stat_2">6.3% (7)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">2.8 - 13</td>
-<td class="gt_row gt_center" headers="p.value">0.9</td>
-<td class="gt_row gt_center" headers="q.value">&gt;0.9</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">Comorbidities - previous urologic surgery</td>
-<td class="gt_row gt_center" headers="stat_0">12.2% (35)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">8.8 - 17</td>
-<td class="gt_row gt_center" headers="stat_1">12.6% (22)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">8.3 - 19</td>
-<td class="gt_row gt_center" headers="stat_2">11.6% (13)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">6.6 - 19</td>
-<td class="gt_row gt_center" headers="p.value">0.8</td>
-<td class="gt_row gt_center" headers="q.value">&gt;0.9</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">UrineMCS</td>
-<td class="gt_row gt_center" headers="stat_0">19.6% (56)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">15 - 25</td>
-<td class="gt_row gt_center" headers="stat_1">19.5% (34)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">14 - 26</td>
-<td class="gt_row gt_center" headers="stat_2">19.6% (22)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">13 - 28</td>
-<td class="gt_row gt_center" headers="p.value">&gt;0.9</td>
-<td class="gt_row gt_center" headers="q.value">&gt;0.9</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">Fentanyl - Bupivicaine</td>
-<td class="gt_row gt_center" headers="stat_0">70.3% (201)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">65 - 75</td>
-<td class="gt_row gt_center" headers="stat_1">73.0% (127)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">66 - 79</td>
-<td class="gt_row gt_center" headers="stat_2">66.1% (74)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">56 - 75</td>
-<td class="gt_row gt_center" headers="p.value">0.2</td>
-<td class="gt_row gt_center" headers="q.value">0.4</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">Intraop fluid (mL)</td>
-<td class="gt_row gt_center" headers="stat_0">1,213.9 (709.7)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">1,131 - 1,297</td>
-<td class="gt_row gt_center" headers="stat_1">1,099.5 (608.5)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">1,008 - 1,191</td>
-<td class="gt_row gt_center" headers="stat_2">1,391.1 (814.6)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">1,238 - 1,544</td>
-<td class="gt_row gt_center" headers="p.value">0.005</td>
-<td class="gt_row gt_center" headers="q.value">0.017</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
-<td class="gt_row gt_center" headers="stat_0">3</td>
-<td class="gt_row gt_center" headers="ci_stat_0"><br>
-</td>
-<td class="gt_row gt_center" headers="stat_1">2</td>
-<td class="gt_row gt_center" headers="ci_stat_1"><br>
-</td>
-<td class="gt_row gt_center" headers="stat_2">1</td>
-<td class="gt_row gt_center" headers="ci_stat_2"><br>
-</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-<td class="gt_row gt_center" headers="q.value"><br>
-</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">Spinal anaesthesia</td>
-<td class="gt_row gt_center" headers="stat_0">79.4% (227)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">74 - 84</td>
-<td class="gt_row gt_center" headers="stat_1">78.7% (137)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">72 - 84</td>
-<td class="gt_row gt_center" headers="stat_2">80.4% (90)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">72 - 87</td>
-<td class="gt_row gt_center" headers="p.value">0.7</td>
-<td class="gt_row gt_center" headers="q.value">&gt;0.9</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">SurgicalDuration</td>
-<td class="gt_row gt_center" headers="stat_0">131.1 (39.9)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">127 - 136</td>
-<td class="gt_row gt_center" headers="stat_1">120.3 (27.2)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">116 - 124</td>
-<td class="gt_row gt_center" headers="stat_2">148.0 (49.6)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">139 - 157</td>
-<td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
-<td class="gt_row gt_center" headers="q.value">&lt;0.001</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">Reactive IDC insertion</td>
-<td class="gt_row gt_center" headers="stat_0">10.5% (30)</td>
-<td class="gt_row gt_center" headers="ci_stat_0">7.3 - 15</td>
-<td class="gt_row gt_center" headers="stat_1">17.2% (30)</td>
-<td class="gt_row gt_center" headers="ci_stat_1">12 - 24</td>
-<td class="gt_row gt_center" headers="stat_2">0.0% (0)</td>
-<td class="gt_row gt_center" headers="ci_stat_2">0.00 - 4.1</td>
-<td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
-<td class="gt_row gt_center" headers="q.value">&lt;0.001</td>
-</tr>
-</tbody><tfoot class="gt_footnotes">
-<tr class="odd">
-<td colspan="9" class="gt_footnote"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> Mean (SD); % (n)</td>
-</tr>
-<tr class="even">
-<td colspan="9" class="gt_footnote"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span> CI = Confidence Interval</td>
-</tr>
-<tr class="odd">
-<td colspan="9" class="gt_footnote"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>3</sup></span> Wilcoxon rank sum test; Pearson’s Chi-squared test; Fisher’s exact test</td>
-</tr>
-<tr class="even">
-<td colspan="9" class="gt_footnote"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>4</sup></span> False discovery rate correction for multiple testing</td>
-</tr>
-</tfoot>
-
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="label"><span data-qmd-base64="PHN0cm9uZz5DaGFyYWN0ZXJpc3RpYzwvc3Ryb25nPg=="><span class="gt_from_md"><strong>Characteristic</strong></span></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="stat_0"><span data-qmd-base64="PHN0cm9uZz5PdmVyYWxsPC9zdHJvbmc+PGJyIC8+Ck4gPSAyODY="><span class="gt_from_md"><strong>Overall</strong><br>
+N = 286</span></span><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="ci_stat_0"><span data-qmd-base64="PHN0cm9uZz45NSUgQ0k8L3N0cm9uZz4="><span class="gt_from_md"><strong>95% CI</strong></span></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="stat_1"><span data-qmd-base64="PHN0cm9uZz5Obzwvc3Ryb25nPjxiciAvPgpOID0gMTc0"><span class="gt_from_md"><strong>No</strong><br>
+N = 174</span></span><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="ci_stat_1"><span data-qmd-base64="PHN0cm9uZz45NSUgQ0k8L3N0cm9uZz4="><span class="gt_from_md"><strong>95% CI</strong></span></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="stat_2"><span data-qmd-base64="PHN0cm9uZz5ZZXM8L3N0cm9uZz48YnIgLz4KTiA9IDExMg=="><span class="gt_from_md"><strong>Yes</strong><br>
+N = 112</span></span><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="ci_stat_2"><span data-qmd-base64="PHN0cm9uZz45NSUgQ0k8L3N0cm9uZz4="><span class="gt_from_md"><strong>95% CI</strong></span></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="p.value"><span data-qmd-base64="PHN0cm9uZz5wLXZhbHVlPC9zdHJvbmc+"><span class="gt_from_md"><strong>p-value</strong></span></span><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="q.value"><span data-qmd-base64="PHN0cm9uZz5xLXZhbHVlPC9zdHJvbmc+"><span class="gt_from_md"><strong>q-value</strong></span></span><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>3</sup></span></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="label" class="gt_row gt_left">Age at surgery</td>
+<td headers="stat_0" class="gt_row gt_center">69.4 (9.3)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">68 - 70</td>
+<td headers="stat_1" class="gt_row gt_center">69.5 (9.0)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">68 - 71</td>
+<td headers="stat_2" class="gt_row gt_center">69.3 (9.9)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">67 - 71</td>
+<td headers="p.value" class="gt_row gt_center">0.9</td>
+<td headers="q.value" class="gt_row gt_center">&gt;0.9</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">BMI</td>
+<td headers="stat_0" class="gt_row gt_center">31.8 (6.2)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">31 - 33</td>
+<td headers="stat_1" class="gt_row gt_center">31.3 (6.0)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">30 - 32</td>
+<td headers="stat_2" class="gt_row gt_center">32.6 (6.4)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">31 - 34</td>
+<td headers="p.value" class="gt_row gt_center">0.089</td>
+<td headers="q.value" class="gt_row gt_center">0.9</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Sex</td>
+<td headers="stat_0" class="gt_row gt_center">51.7% (148)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">46 - 58</td>
+<td headers="stat_1" class="gt_row gt_center">47.1% (82)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">40 - 55</td>
+<td headers="stat_2" class="gt_row gt_center">58.9% (66)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">49 - 68</td>
+<td headers="p.value" class="gt_row gt_center">0.051</td>
+<td headers="q.value" class="gt_row gt_center">0.6</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Bilateral</td>
+<td headers="stat_0" class="gt_row gt_center">5.9% (17)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">3.6 - 9.5</td>
+<td headers="stat_1" class="gt_row gt_center">0.0% (0)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">0.00 - 2.7</td>
+<td headers="stat_2" class="gt_row gt_center">15.2% (17)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">9.3 - 23</td>
+<td headers="p.value" class="gt_row gt_center">&lt;0.001</td>
+<td headers="q.value" class="gt_row gt_center">&lt;0.001</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Joint</td>
+<td headers="stat_0" class="gt_row gt_center"><br></td>
+<td headers="ci_stat_0" class="gt_row gt_center"><br></td>
+<td headers="stat_1" class="gt_row gt_center"><br></td>
+<td headers="ci_stat_1" class="gt_row gt_center"><br></td>
+<td headers="stat_2" class="gt_row gt_center"><br></td>
+<td headers="ci_stat_2" class="gt_row gt_center"><br></td>
+<td headers="p.value" class="gt_row gt_center">&gt;0.9</td>
+<td headers="q.value" class="gt_row gt_center">&gt;0.9</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Hip</td>
+<td headers="stat_0" class="gt_row gt_center">36.0% (103)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">31 - 42</td>
+<td headers="stat_1" class="gt_row gt_center">36.2% (63)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">29 - 44</td>
+<td headers="stat_2" class="gt_row gt_center">35.7% (40)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">27 - 45</td>
+<td headers="p.value" class="gt_row gt_center"><br></td>
+<td headers="q.value" class="gt_row gt_center"><br></td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Knee</td>
+<td headers="stat_0" class="gt_row gt_center">64.0% (183)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">58 - 69</td>
+<td headers="stat_1" class="gt_row gt_center">63.8% (111)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">56 - 71</td>
+<td headers="stat_2" class="gt_row gt_center">64.3% (72)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">55 - 73</td>
+<td headers="p.value" class="gt_row gt_center"><br></td>
+<td headers="q.value" class="gt_row gt_center"><br></td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Surgeon</td>
+<td headers="stat_0" class="gt_row gt_center"><br></td>
+<td headers="ci_stat_0" class="gt_row gt_center"><br></td>
+<td headers="stat_1" class="gt_row gt_center"><br></td>
+<td headers="ci_stat_1" class="gt_row gt_center"><br></td>
+<td headers="stat_2" class="gt_row gt_center"><br></td>
+<td headers="ci_stat_2" class="gt_row gt_center"><br></td>
+<td headers="p.value" class="gt_row gt_center">&lt;0.001</td>
+<td headers="q.value" class="gt_row gt_center">&lt;0.001</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;A</td>
+<td headers="stat_0" class="gt_row gt_center">23.0% (58)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">18 - 29</td>
+<td headers="stat_1" class="gt_row gt_center">32.4% (46)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">25 - 41</td>
+<td headers="stat_2" class="gt_row gt_center">10.9% (12)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">6.0 - 19</td>
+<td headers="p.value" class="gt_row gt_center"><br></td>
+<td headers="q.value" class="gt_row gt_center"><br></td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;B</td>
+<td headers="stat_0" class="gt_row gt_center">44.8% (113)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">39 - 51</td>
+<td headers="stat_1" class="gt_row gt_center">21.1% (30)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">15 - 29</td>
+<td headers="stat_2" class="gt_row gt_center">75.5% (83)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">66 - 83</td>
+<td headers="p.value" class="gt_row gt_center"><br></td>
+<td headers="q.value" class="gt_row gt_center"><br></td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;C</td>
+<td headers="stat_0" class="gt_row gt_center">3.6% (9)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">1.8 - 6.9</td>
+<td headers="stat_1" class="gt_row gt_center">3.5% (5)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">1.3 - 8.4</td>
+<td headers="stat_2" class="gt_row gt_center">3.6% (4)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">1.2 - 9.6</td>
+<td headers="p.value" class="gt_row gt_center"><br></td>
+<td headers="q.value" class="gt_row gt_center"><br></td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;D</td>
+<td headers="stat_0" class="gt_row gt_center">2.0% (5)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">0.73 - 4.8</td>
+<td headers="stat_1" class="gt_row gt_center">2.8% (4)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">0.91 - 7.5</td>
+<td headers="stat_2" class="gt_row gt_center">0.9% (1)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">0.05 - 5.7</td>
+<td headers="p.value" class="gt_row gt_center"><br></td>
+<td headers="q.value" class="gt_row gt_center"><br></td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;E</td>
+<td headers="stat_0" class="gt_row gt_center">26.2% (66)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">21 - 32</td>
+<td headers="stat_1" class="gt_row gt_center">39.4% (56)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">31 - 48</td>
+<td headers="stat_2" class="gt_row gt_center">9.1% (10)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">4.7 - 16</td>
+<td headers="p.value" class="gt_row gt_center"><br></td>
+<td headers="q.value" class="gt_row gt_center"><br></td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;F</td>
+<td headers="stat_0" class="gt_row gt_center">0.4% (1)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">0.02 - 2.5</td>
+<td headers="stat_1" class="gt_row gt_center">0.7% (1)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">0.04 - 4.4</td>
+<td headers="stat_2" class="gt_row gt_center">0.0% (0)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">0.00 - 4.2</td>
+<td headers="p.value" class="gt_row gt_center"><br></td>
+<td headers="q.value" class="gt_row gt_center"><br></td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
+<td headers="stat_0" class="gt_row gt_center">34</td>
+<td headers="ci_stat_0" class="gt_row gt_center"><br></td>
+<td headers="stat_1" class="gt_row gt_center">32</td>
+<td headers="ci_stat_1" class="gt_row gt_center"><br></td>
+<td headers="stat_2" class="gt_row gt_center">2</td>
+<td headers="ci_stat_2" class="gt_row gt_center"><br></td>
+<td headers="p.value" class="gt_row gt_center"><br></td>
+<td headers="q.value" class="gt_row gt_center"><br></td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Comorbidities - diabetes</td>
+<td headers="stat_0" class="gt_row gt_center">21.0% (60)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">17 - 26</td>
+<td headers="stat_1" class="gt_row gt_center">18.4% (32)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">13 - 25</td>
+<td headers="stat_2" class="gt_row gt_center">25.0% (28)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">18 - 34</td>
+<td headers="p.value" class="gt_row gt_center">0.2</td>
+<td headers="q.value" class="gt_row gt_center">&gt;0.9</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Comorbidities - cardiovascular</td>
+<td headers="stat_0" class="gt_row gt_center">27.3% (78)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">22 - 33</td>
+<td headers="stat_1" class="gt_row gt_center">29.3% (51)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">23 - 37</td>
+<td headers="stat_2" class="gt_row gt_center">24.1% (27)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">17 - 33</td>
+<td headers="p.value" class="gt_row gt_center">0.3</td>
+<td headers="q.value" class="gt_row gt_center">&gt;0.9</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Comorbidities - neurological</td>
+<td headers="stat_0" class="gt_row gt_center">5.9% (17)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">3.6 - 9.5</td>
+<td headers="stat_1" class="gt_row gt_center">5.7% (10)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">2.9 - 11</td>
+<td headers="stat_2" class="gt_row gt_center">6.3% (7)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">2.8 - 13</td>
+<td headers="p.value" class="gt_row gt_center">0.9</td>
+<td headers="q.value" class="gt_row gt_center">&gt;0.9</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Comorbidities - previous urologic surgery</td>
+<td headers="stat_0" class="gt_row gt_center">12.2% (35)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">8.8 - 17</td>
+<td headers="stat_1" class="gt_row gt_center">12.6% (22)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">8.3 - 19</td>
+<td headers="stat_2" class="gt_row gt_center">11.6% (13)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">6.6 - 19</td>
+<td headers="p.value" class="gt_row gt_center">0.8</td>
+<td headers="q.value" class="gt_row gt_center">&gt;0.9</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">UrineMCS</td>
+<td headers="stat_0" class="gt_row gt_center">19.6% (56)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">15 - 25</td>
+<td headers="stat_1" class="gt_row gt_center">19.5% (34)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">14 - 26</td>
+<td headers="stat_2" class="gt_row gt_center">19.6% (22)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">13 - 28</td>
+<td headers="p.value" class="gt_row gt_center">&gt;0.9</td>
+<td headers="q.value" class="gt_row gt_center">&gt;0.9</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Fentanyl - Bupivicaine</td>
+<td headers="stat_0" class="gt_row gt_center">70.3% (201)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">65 - 75</td>
+<td headers="stat_1" class="gt_row gt_center">73.0% (127)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">66 - 79</td>
+<td headers="stat_2" class="gt_row gt_center">66.1% (74)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">56 - 75</td>
+<td headers="p.value" class="gt_row gt_center">0.2</td>
+<td headers="q.value" class="gt_row gt_center">&gt;0.9</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Intraop fluid (mL)</td>
+<td headers="stat_0" class="gt_row gt_center">1,213.9 (709.7)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">1,131 - 1,297</td>
+<td headers="stat_1" class="gt_row gt_center">1,099.5 (608.5)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">1,008 - 1,191</td>
+<td headers="stat_2" class="gt_row gt_center">1,391.1 (814.6)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">1,238 - 1,544</td>
+<td headers="p.value" class="gt_row gt_center">0.001</td>
+<td headers="q.value" class="gt_row gt_center">0.017</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
+<td headers="stat_0" class="gt_row gt_center">3</td>
+<td headers="ci_stat_0" class="gt_row gt_center"><br></td>
+<td headers="stat_1" class="gt_row gt_center">2</td>
+<td headers="ci_stat_1" class="gt_row gt_center"><br></td>
+<td headers="stat_2" class="gt_row gt_center">1</td>
+<td headers="ci_stat_2" class="gt_row gt_center"><br></td>
+<td headers="p.value" class="gt_row gt_center"><br></td>
+<td headers="q.value" class="gt_row gt_center"><br></td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Spinal anaesthesia</td>
+<td headers="stat_0" class="gt_row gt_center">79.4% (227)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">74 - 84</td>
+<td headers="stat_1" class="gt_row gt_center">78.7% (137)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">72 - 84</td>
+<td headers="stat_2" class="gt_row gt_center">80.4% (90)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">72 - 87</td>
+<td headers="p.value" class="gt_row gt_center">0.7</td>
+<td headers="q.value" class="gt_row gt_center">&gt;0.9</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">SurgicalDuration</td>
+<td headers="stat_0" class="gt_row gt_center">131.1 (39.9)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">127 - 136</td>
+<td headers="stat_1" class="gt_row gt_center">120.3 (27.2)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">116 - 124</td>
+<td headers="stat_2" class="gt_row gt_center">148.0 (49.6)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">139 - 157</td>
+<td headers="p.value" class="gt_row gt_center">&lt;0.001</td>
+<td headers="q.value" class="gt_row gt_center">&lt;0.001</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Reactive IDC insertion</td>
+<td headers="stat_0" class="gt_row gt_center">10.5% (30)</td>
+<td headers="ci_stat_0" class="gt_row gt_center">7.3 - 15</td>
+<td headers="stat_1" class="gt_row gt_center">17.2% (30)</td>
+<td headers="ci_stat_1" class="gt_row gt_center">12 - 24</td>
+<td headers="stat_2" class="gt_row gt_center">0.0% (0)</td>
+<td headers="ci_stat_2" class="gt_row gt_center">0.00 - 4.1</td>
+<td headers="p.value" class="gt_row gt_center">&lt;0.001</td>
+<td headers="q.value" class="gt_row gt_center">&lt;0.001</td></tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="9"><span data-qmd-base64="QWJicmV2aWF0aW9uOiBDSSA9IENvbmZpZGVuY2UgSW50ZXJ2YWw="><span class="gt_from_md">Abbreviation: CI = Confidence Interval</span></span></td>
+    </tr>
+  </tfoot>
+  <tfoot class="gt_footnotes">
+    <tr>
+      <td class="gt_footnote" colspan="9"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> <span data-qmd-base64="TWVhbiAoU0QpOyAlIChuKQ=="><span class="gt_from_md">Mean (SD); % (n)</span></span></td>
+    </tr>
+    <tr>
+      <td class="gt_footnote" colspan="9"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span> <span data-qmd-base64="V2VsY2ggVHdvIFNhbXBsZSB0LXRlc3Q7IFBlYXJzb27igJlzIENoaS1zcXVhcmVkIHRlc3Q7IEZpc2hlcuKAmXMgZXhhY3QgdGVzdA=="><span class="gt_from_md">Welch Two Sample t-test; Pearson’s Chi-squared test; Fisher’s exact test</span></span></td>
+    </tr>
+    <tr>
+      <td class="gt_footnote" colspan="9"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>3</sup></span> <span data-qmd-base64="SG9sbSBjb3JyZWN0aW9uIGZvciBtdWx0aXBsZSB0ZXN0aW5n"><span class="gt_from_md">Holm correction for multiple testing</span></span></td>
+    </tr>
+  </tfoot>
 </table>
-
 </div>
 </div>
 </div>
@@ -1836,71 +2402,7 @@ div.csl-indent {
 <h2 data-number="3.3" class="anchored" data-anchor-id="strobe-15-outcome-data"><span class="header-section-number">3.3</span> STROBE [15] Outcome Data:</h2>
 <!--# *Evaluate the adequacy of the presentation of outcome data (over time).* -->
 <!--# *Need to adjust the summary stat labels on x axis* -->
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Figure 2: Summary of CLSS total score before and after lower limb arthroplasty</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p><em>Do the responses remain stable at the individual level</em></p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
+<p>Annotate the results of a paired t-test onto the figure</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -1910,6 +2412,7 @@ div.csl-indent {
 </div>
 </div>
 </div>
+<p>Figure 2: Summary of CLSS total score before and after lower limb arthroplasty (complete case analysis)</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -1919,15 +2422,7 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
+<p><em>Do the responses remain stable at the individual level</em></p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -1955,75 +2450,104 @@ div.csl-indent {
 </div>
 </div>
 </div>
-</section>
-<section id="strobe-16-main-results" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="strobe-16-main-results"><span class="header-section-number">3.4</span> STROBE [16] Main Results:</h2>
-<p><em>Critically analyze the presentation and interpretation of primary findings, including effect estimates and confidence intervals.</em></p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>                  2.5 %     97.5 %
-.sig01        2.7128210  4.1091645
-.sig02        0.0000000  2.9173500
-.sigma        1.9517061  3.2890349
-(Intercept)  -0.9172971 11.2639835
-Timepoint1   -0.7560765  0.9099227
-SexMale      -3.8263113 -0.4758845
-AgeAtSurgery -0.0444211  0.1272181</code></pre>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
-</div>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>Linear mixed model fit by REML ['lmerMod']
-Formula: Total ~ Timepoint1 + Sex + AgeAtSurgery + ((1 | CombID) + (0 +  
-    Timepoint1 | CombID))
-   Data: dplyr::filter(CLSSTotal3, PreIDC == 1)
-
-REML criterion at convergence: 1020.3
-
-Scaled residuals: 
-    Min      1Q  Median      3Q     Max 
--2.4477 -0.4894 -0.1635  0.4219  2.5898 
-
-Random effects:
- Groups   Name        Variance Std.Dev.
- CombID   (Intercept) 11.793   3.434   
- CombID.1 Timepoint1   1.573   1.254   
- Residual              7.349   2.711   
-Number of obs: 182, groups:  CombID, 91
-
-Fixed effects:
-             Estimate Std. Error t value
-(Intercept)   5.17341    3.12680   1.655
-Timepoint1    0.07692    0.42286   0.182
-SexMale      -2.15110    0.85721  -2.509
-AgeAtSurgery  0.04140    0.04406   0.940
-
-Correlation of Fixed Effects:
-            (Intr) Tmpnt1 SexMal
-Timepoint1  -0.061              
-SexMale     -0.121  0.000       
-AgeAtSurgry -0.984  0.000  0.016</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="tfxariffjg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#tfxariffjg table {
+<div>
+<figure class="figure">
+<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="strobe-16-main-results" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="strobe-16-main-results"><span class="header-section-number">3.4</span> STROBE [16] Main Results:</h2>
+<p><em>Critically analyze the presentation and interpretation of primary findings, including effect estimates and confidence intervals.</em></p>
+<p>Regression Results - Q2</p>
+<p>Complete Case Analysis - Full set</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div id="hmfibxbckj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hmfibxbckj table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#tfxariffjg thead, #tfxariffjg tbody, #tfxariffjg tfoot, #tfxariffjg tr, #tfxariffjg td, #tfxariffjg th {
+#hmfibxbckj thead, #hmfibxbckj tbody, #hmfibxbckj tfoot, #hmfibxbckj tr, #hmfibxbckj td, #hmfibxbckj th {
   border-style: none;
 }
 
-#tfxariffjg p {
+#hmfibxbckj p {
   margin: 0;
   padding: 0;
 }
 
-#tfxariffjg .gt_table {
+#hmfibxbckj .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2049,12 +2573,12 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#tfxariffjg .gt_caption {
+#hmfibxbckj .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#tfxariffjg .gt_title {
+#hmfibxbckj .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2066,7 +2590,7 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   border-bottom-width: 0;
 }
 
-#tfxariffjg .gt_subtitle {
+#hmfibxbckj .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2078,7 +2602,7 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   border-top-width: 0;
 }
 
-#tfxariffjg .gt_heading {
+#hmfibxbckj .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2090,13 +2614,13 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#tfxariffjg .gt_bottom_border {
+#hmfibxbckj .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#tfxariffjg .gt_col_headings {
+#hmfibxbckj .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2111,7 +2635,7 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#tfxariffjg .gt_col_heading {
+#hmfibxbckj .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2131,7 +2655,7 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   overflow-x: hidden;
 }
 
-#tfxariffjg .gt_column_spanner_outer {
+#hmfibxbckj .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2143,15 +2667,15 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   padding-right: 4px;
 }
 
-#tfxariffjg .gt_column_spanner_outer:first-child {
+#hmfibxbckj .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#tfxariffjg .gt_column_spanner_outer:last-child {
+#hmfibxbckj .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#tfxariffjg .gt_column_spanner {
+#hmfibxbckj .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2163,11 +2687,11 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   width: 100%;
 }
 
-#tfxariffjg .gt_spanner_row {
+#hmfibxbckj .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#tfxariffjg .gt_group_heading {
+#hmfibxbckj .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2193,7 +2717,7 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   text-align: left;
 }
 
-#tfxariffjg .gt_empty_group_heading {
+#hmfibxbckj .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2208,15 +2732,15 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   vertical-align: middle;
 }
 
-#tfxariffjg .gt_from_md > :first-child {
+#hmfibxbckj .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#tfxariffjg .gt_from_md > :last-child {
+#hmfibxbckj .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#tfxariffjg .gt_row {
+#hmfibxbckj .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2235,7 +2759,7 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   overflow-x: hidden;
 }
 
-#tfxariffjg .gt_stub {
+#hmfibxbckj .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2248,7 +2772,7 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   padding-right: 5px;
 }
 
-#tfxariffjg .gt_stub_row_group {
+#hmfibxbckj .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2262,15 +2786,15 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   vertical-align: top;
 }
 
-#tfxariffjg .gt_row_group_first td {
+#hmfibxbckj .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#tfxariffjg .gt_row_group_first th {
+#hmfibxbckj .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#tfxariffjg .gt_summary_row {
+#hmfibxbckj .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2280,16 +2804,16 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   padding-right: 5px;
 }
 
-#tfxariffjg .gt_first_summary_row {
+#hmfibxbckj .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#tfxariffjg .gt_first_summary_row.thick {
+#hmfibxbckj .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#tfxariffjg .gt_last_summary_row {
+#hmfibxbckj .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2299,7 +2823,7 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#tfxariffjg .gt_grand_summary_row {
+#hmfibxbckj .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2309,7 +2833,7 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   padding-right: 5px;
 }
 
-#tfxariffjg .gt_first_grand_summary_row {
+#hmfibxbckj .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2319,7 +2843,7 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#tfxariffjg .gt_last_grand_summary_row_top {
+#hmfibxbckj .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2329,11 +2853,11 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#tfxariffjg .gt_striped {
+#hmfibxbckj .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#tfxariffjg .gt_table_body {
+#hmfibxbckj .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2342,7 +2866,7 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#tfxariffjg .gt_footnotes {
+#hmfibxbckj .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2356,7 +2880,7 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#tfxariffjg .gt_footnote {
+#hmfibxbckj .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2365,7 +2889,7 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   padding-right: 5px;
 }
 
-#tfxariffjg .gt_sourcenotes {
+#hmfibxbckj .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2379,7 +2903,7 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#tfxariffjg .gt_sourcenote {
+#hmfibxbckj .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2387,137 +2911,119 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
   padding-right: 5px;
 }
 
-#tfxariffjg .gt_left {
+#hmfibxbckj .gt_left {
   text-align: left;
 }
 
-#tfxariffjg .gt_center {
+#hmfibxbckj .gt_center {
   text-align: center;
 }
 
-#tfxariffjg .gt_right {
+#hmfibxbckj .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#tfxariffjg .gt_font_normal {
+#hmfibxbckj .gt_font_normal {
   font-weight: normal;
 }
 
-#tfxariffjg .gt_font_bold {
+#hmfibxbckj .gt_font_bold {
   font-weight: bold;
 }
 
-#tfxariffjg .gt_font_italic {
+#hmfibxbckj .gt_font_italic {
   font-style: italic;
 }
 
-#tfxariffjg .gt_super {
+#hmfibxbckj .gt_super {
   font-size: 65%;
 }
 
-#tfxariffjg .gt_footnote_marks {
+#hmfibxbckj .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#tfxariffjg .gt_asterisk {
+#hmfibxbckj .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#tfxariffjg .gt_indent_1 {
+#hmfibxbckj .gt_indent_1 {
   text-indent: 5px;
 }
 
-#tfxariffjg .gt_indent_2 {
+#hmfibxbckj .gt_indent_2 {
   text-indent: 10px;
 }
 
-#tfxariffjg .gt_indent_3 {
+#hmfibxbckj .gt_indent_3 {
   text-indent: 15px;
 }
 
-#tfxariffjg .gt_indent_4 {
+#hmfibxbckj .gt_indent_4 {
   text-indent: 20px;
 }
 
-#tfxariffjg .gt_indent_5 {
+#hmfibxbckj .gt_indent_5 {
   text-indent: 25px;
 }
 
-#tfxariffjg .katex-display {
+#hmfibxbckj .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#tfxariffjg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#hmfibxbckj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
 
 <table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
 <thead>
 <tr class="header gt_col_headings">
 <th id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Characteristic</strong></th>
-<th id="estimate" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>exp(Beta)</strong></th>
-<th id="conf.low" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>95% CI</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+<th id="estimate" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Beta</strong></th>
+<th id="conf.low" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>95% CI</strong></th>
 <th id="p.value" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>p-value</strong></th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">Timepoint1</td>
-<td class="gt_row gt_center" headers="estimate">1.08</td>
-<td class="gt_row gt_center" headers="conf.low">0.47, 2.47</td>
-<td class="gt_row gt_center" headers="p.value">0.86</td>
+<td class="gt_row gt_left" headers="label">PreIDC</td>
+<td class="gt_row gt_center" headers="estimate">-0.11</td>
+<td class="gt_row gt_center" headers="conf.low">-1.2, 0.95</td>
+<td class="gt_row gt_center" headers="p.value">0.84</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">BaseCLSS</td>
+<td class="gt_row gt_center" headers="estimate">0.69</td>
+<td class="gt_row gt_center" headers="conf.low">0.58, 0.80</td>
+<td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">Bilateral</td>
+<td class="gt_row gt_center" headers="estimate">0.10</td>
+<td class="gt_row gt_center" headers="conf.low">-2.0, 2.2</td>
+<td class="gt_row gt_center" headers="p.value">0.93</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">Sex</td>
-<td class="gt_row gt_center" headers="estimate">0.12</td>
-<td class="gt_row gt_center" headers="conf.low">0.02, 0.62</td>
-<td class="gt_row gt_center" headers="p.value">0.012</td>
+<td class="gt_row gt_center" headers="estimate">0.03</td>
+<td class="gt_row gt_center" headers="conf.low">-0.97, 1.0</td>
+<td class="gt_row gt_center" headers="p.value">0.95</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">AgeAtSurgery</td>
-<td class="gt_row gt_center" headers="estimate">1.04</td>
-<td class="gt_row gt_center" headers="conf.low">0.96, 1.14</td>
-<td class="gt_row gt_center" headers="p.value">0.35</td>
+<td class="gt_row gt_center" headers="estimate">0.02</td>
+<td class="gt_row gt_center" headers="conf.low">-0.03, 0.08</td>
+<td class="gt_row gt_center" headers="p.value">0.37</td>
 </tr>
+</tbody><tfoot class="gt_sourcenotes">
 <tr class="even">
-<td class="gt_row gt_left" headers="label">CombID.sd__(Intercept)</td>
-<td class="gt_row gt_center" headers="estimate">3.43</td>
-<td class="gt_row gt_center" headers="conf.low"><br>
-</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">CombID.1.sd__Timepoint1</td>
-<td class="gt_row gt_center" headers="estimate">1.25</td>
-<td class="gt_row gt_center" headers="conf.low"><br>
-</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">Residual.sd__Observation</td>
-<td class="gt_row gt_center" headers="estimate">2.71</td>
-<td class="gt_row gt_center" headers="conf.low"><br>
-</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-</tr>
-</tbody><tfoot class="gt_footnotes">
-<tr class="odd">
-<td colspan="4" class="gt_footnote"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> CI = Confidence Interval</td>
+<td colspan="4" class="gt_sourcenote">Abbreviation: CI = Confidence Interval</td>
 </tr>
 </tfoot>
 
@@ -2526,10 +3032,1606 @@ AgeAtSurgry -0.984  0.000  0.016</code></pre>
 </div>
 </div>
 </div>
+</div>
+<p>Model results - Imputed dataset (Full)</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div id="icczanmzgg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#icczanmzgg table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#icczanmzgg thead, #icczanmzgg tbody, #icczanmzgg tfoot, #icczanmzgg tr, #icczanmzgg td, #icczanmzgg th {
+  border-style: none;
+}
+
+#icczanmzgg p {
+  margin: 0;
+  padding: 0;
+}
+
+#icczanmzgg .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#icczanmzgg .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#icczanmzgg .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#icczanmzgg .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#icczanmzgg .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#icczanmzgg .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#icczanmzgg .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#icczanmzgg .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#icczanmzgg .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#icczanmzgg .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#icczanmzgg .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#icczanmzgg .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#icczanmzgg .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#icczanmzgg .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#icczanmzgg .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#icczanmzgg .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#icczanmzgg .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#icczanmzgg .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#icczanmzgg .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#icczanmzgg .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#icczanmzgg .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#icczanmzgg .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#icczanmzgg .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#icczanmzgg .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#icczanmzgg .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#icczanmzgg .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#icczanmzgg .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#icczanmzgg .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#icczanmzgg .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#icczanmzgg .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#icczanmzgg .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#icczanmzgg .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#icczanmzgg .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#icczanmzgg .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#icczanmzgg .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#icczanmzgg .gt_left {
+  text-align: left;
+}
+
+#icczanmzgg .gt_center {
+  text-align: center;
+}
+
+#icczanmzgg .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#icczanmzgg .gt_font_normal {
+  font-weight: normal;
+}
+
+#icczanmzgg .gt_font_bold {
+  font-weight: bold;
+}
+
+#icczanmzgg .gt_font_italic {
+  font-style: italic;
+}
+
+#icczanmzgg .gt_super {
+  font-size: 65%;
+}
+
+#icczanmzgg .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#icczanmzgg .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#icczanmzgg .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#icczanmzgg .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#icczanmzgg .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#icczanmzgg .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#icczanmzgg .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#icczanmzgg .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#icczanmzgg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Characteristic</strong></th>
+<th id="estimate" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Beta</strong></th>
+<th id="conf.low" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>95% CI</strong></th>
+<th id="p.value" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>p-value</strong></th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">PreIDC</td>
+<td class="gt_row gt_center" headers="estimate">-0.12</td>
+<td class="gt_row gt_center" headers="conf.low">-1.2, 0.93</td>
+<td class="gt_row gt_center" headers="p.value">0.8</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">BaseCLSS</td>
+<td class="gt_row gt_center" headers="estimate">0.69</td>
+<td class="gt_row gt_center" headers="conf.low">0.57, 0.80</td>
+<td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">Bilateral</td>
+<td class="gt_row gt_center" headers="estimate">0.06</td>
+<td class="gt_row gt_center" headers="conf.low">-2.0, 2.1</td>
+<td class="gt_row gt_center" headers="p.value">&gt;0.9</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">Sex</td>
+<td class="gt_row gt_center" headers="estimate">0.10</td>
+<td class="gt_row gt_center" headers="conf.low">-0.90, 1.1</td>
+<td class="gt_row gt_center" headers="p.value">0.8</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">AgeAtSurgery</td>
+<td class="gt_row gt_center" headers="estimate">0.03</td>
+<td class="gt_row gt_center" headers="conf.low">-0.03, 0.08</td>
+<td class="gt_row gt_center" headers="p.value">0.3</td>
+</tr>
+</tbody><tfoot class="gt_sourcenotes">
+<tr class="even">
+<td colspan="4" class="gt_sourcenote">Abbreviation: CI = Confidence Interval</td>
+</tr>
+</tfoot>
+
+</table>
+
+</div>
+</div>
+</div>
+</div>
+<p>Predictions were generated from the model and summarised.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-40-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="strobe-17-other-analyses" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="strobe-17-other-analyses"><span class="header-section-number">3.5</span> STROBE [17] Other Analyses:</h2>
 <p><em>Critically analyze the presentation and interpretation of subgroups, interactions or the description and evaluation of sensitivity analyses.</em></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div id="fcbhdjhmjq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fcbhdjhmjq table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#fcbhdjhmjq thead, #fcbhdjhmjq tbody, #fcbhdjhmjq tfoot, #fcbhdjhmjq tr, #fcbhdjhmjq td, #fcbhdjhmjq th {
+  border-style: none;
+}
+
+#fcbhdjhmjq p {
+  margin: 0;
+  padding: 0;
+}
+
+#fcbhdjhmjq .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#fcbhdjhmjq .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#fcbhdjhmjq .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#fcbhdjhmjq .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#fcbhdjhmjq .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fcbhdjhmjq .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fcbhdjhmjq .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fcbhdjhmjq .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#fcbhdjhmjq .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#fcbhdjhmjq .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#fcbhdjhmjq .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#fcbhdjhmjq .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#fcbhdjhmjq .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#fcbhdjhmjq .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#fcbhdjhmjq .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#fcbhdjhmjq .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#fcbhdjhmjq .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#fcbhdjhmjq .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#fcbhdjhmjq .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fcbhdjhmjq .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#fcbhdjhmjq .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#fcbhdjhmjq .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#fcbhdjhmjq .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fcbhdjhmjq .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#fcbhdjhmjq .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#fcbhdjhmjq .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fcbhdjhmjq .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fcbhdjhmjq .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#fcbhdjhmjq .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fcbhdjhmjq .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#fcbhdjhmjq .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fcbhdjhmjq .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fcbhdjhmjq .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fcbhdjhmjq .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fcbhdjhmjq .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fcbhdjhmjq .gt_left {
+  text-align: left;
+}
+
+#fcbhdjhmjq .gt_center {
+  text-align: center;
+}
+
+#fcbhdjhmjq .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#fcbhdjhmjq .gt_font_normal {
+  font-weight: normal;
+}
+
+#fcbhdjhmjq .gt_font_bold {
+  font-weight: bold;
+}
+
+#fcbhdjhmjq .gt_font_italic {
+  font-style: italic;
+}
+
+#fcbhdjhmjq .gt_super {
+  font-size: 65%;
+}
+
+#fcbhdjhmjq .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#fcbhdjhmjq .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#fcbhdjhmjq .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#fcbhdjhmjq .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#fcbhdjhmjq .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#fcbhdjhmjq .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#fcbhdjhmjq .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#fcbhdjhmjq .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#fcbhdjhmjq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Characteristic</strong></th>
+<th id="estimate" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Beta</strong></th>
+<th id="conf.low" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>95% CI</strong></th>
+<th id="p.value" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>p-value</strong></th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">PreIDC</td>
+<td class="gt_row gt_center" headers="estimate">-0.35</td>
+<td class="gt_row gt_center" headers="conf.low">-1.42, 0.73</td>
+<td class="gt_row gt_center" headers="p.value">0.525</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">BaseCLSS</td>
+<td class="gt_row gt_center" headers="estimate">0.72</td>
+<td class="gt_row gt_center" headers="conf.low">0.60, 0.85</td>
+<td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">Bilateral</td>
+<td class="gt_row gt_center" headers="estimate">0.07</td>
+<td class="gt_row gt_center" headers="conf.low">-1.97, 2.11</td>
+<td class="gt_row gt_center" headers="p.value">0.947</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">Sex</td>
+<td class="gt_row gt_center" headers="estimate">0.27</td>
+<td class="gt_row gt_center" headers="conf.low">-0.78, 1.32</td>
+<td class="gt_row gt_center" headers="p.value">0.613</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">AgeAtSurgery</td>
+<td class="gt_row gt_center" headers="estimate">0.03</td>
+<td class="gt_row gt_center" headers="conf.low">-0.03, 0.08</td>
+<td class="gt_row gt_center" headers="p.value">0.351</td>
+</tr>
+</tbody><tfoot class="gt_sourcenotes">
+<tr class="even">
+<td colspan="4" class="gt_sourcenote">Abbreviation: CI = Confidence Interval</td>
+</tr>
+</tfoot>
+
+</table>
+
+</div>
+</div>
+</div>
+</div>
+<p>Predictions were generated from the model and summarised.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="UrinaryComplicationsQ_files/figure-html/unnamed-chunk-44-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div id="geffdlyfre" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#geffdlyfre table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#geffdlyfre thead, #geffdlyfre tbody, #geffdlyfre tfoot, #geffdlyfre tr, #geffdlyfre td, #geffdlyfre th {
+  border-style: none;
+}
+
+#geffdlyfre p {
+  margin: 0;
+  padding: 0;
+}
+
+#geffdlyfre .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#geffdlyfre .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#geffdlyfre .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#geffdlyfre .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#geffdlyfre .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#geffdlyfre .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#geffdlyfre .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#geffdlyfre .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#geffdlyfre .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#geffdlyfre .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#geffdlyfre .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#geffdlyfre .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#geffdlyfre .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#geffdlyfre .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#geffdlyfre .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#geffdlyfre .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#geffdlyfre .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#geffdlyfre .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#geffdlyfre .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#geffdlyfre .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#geffdlyfre .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#geffdlyfre .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#geffdlyfre .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#geffdlyfre .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#geffdlyfre .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#geffdlyfre .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#geffdlyfre .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#geffdlyfre .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#geffdlyfre .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#geffdlyfre .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#geffdlyfre .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#geffdlyfre .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#geffdlyfre .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#geffdlyfre .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#geffdlyfre .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#geffdlyfre .gt_left {
+  text-align: left;
+}
+
+#geffdlyfre .gt_center {
+  text-align: center;
+}
+
+#geffdlyfre .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#geffdlyfre .gt_font_normal {
+  font-weight: normal;
+}
+
+#geffdlyfre .gt_font_bold {
+  font-weight: bold;
+}
+
+#geffdlyfre .gt_font_italic {
+  font-style: italic;
+}
+
+#geffdlyfre .gt_super {
+  font-size: 65%;
+}
+
+#geffdlyfre .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#geffdlyfre .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#geffdlyfre .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#geffdlyfre .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#geffdlyfre .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#geffdlyfre .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#geffdlyfre .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#geffdlyfre .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#geffdlyfre div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header gt_col_headings gt_spanner_row">
+<th rowspan="2" id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Characteristic</strong></th>
+<th colspan="3" id="level 1; estimate_1" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+Complete Case
+</div></th>
+<th colspan="3" id="level 1; estimate_2" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+ImputFull
+</div></th>
+<th colspan="3" id="level 1; estimate_3" class="gt_center gt_columns_top_border gt_column_spanner_outer" data-quarto-table-cell-role="th" scope="colgroup"><div class="gt_column_spanner">
+ImputSensitivity
+</div></th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="estimate_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Beta</strong></th>
+<th id="conf.low_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>95% CI</strong></th>
+<th id="p.value_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>p-value</strong></th>
+<th id="estimate_2" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Beta</strong></th>
+<th id="conf.low_2" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>95% CI</strong></th>
+<th id="p.value_2" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>p-value</strong></th>
+<th id="estimate_3" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Beta</strong></th>
+<th id="conf.low_3" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>95% CI</strong></th>
+<th id="p.value_3" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>p-value</strong></th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">PreIDC</td>
+<td class="gt_row gt_center" headers="estimate_1">-0.11</td>
+<td class="gt_row gt_center" headers="conf.low_1">-1.2, 0.95</td>
+<td class="gt_row gt_center" headers="p.value_1">0.84</td>
+<td class="gt_row gt_center" headers="estimate_2">-0.12</td>
+<td class="gt_row gt_center" headers="conf.low_2">-1.2, 0.93</td>
+<td class="gt_row gt_center" headers="p.value_2">0.8</td>
+<td class="gt_row gt_center" headers="estimate_3">-0.35</td>
+<td class="gt_row gt_center" headers="conf.low_3">-1.42, 0.73</td>
+<td class="gt_row gt_center" headers="p.value_3">0.525</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">BaseCLSS</td>
+<td class="gt_row gt_center" headers="estimate_1">0.69</td>
+<td class="gt_row gt_center" headers="conf.low_1">0.58, 0.80</td>
+<td class="gt_row gt_center" headers="p.value_1">&lt;0.001</td>
+<td class="gt_row gt_center" headers="estimate_2">0.69</td>
+<td class="gt_row gt_center" headers="conf.low_2">0.57, 0.80</td>
+<td class="gt_row gt_center" headers="p.value_2">&lt;0.001</td>
+<td class="gt_row gt_center" headers="estimate_3">0.72</td>
+<td class="gt_row gt_center" headers="conf.low_3">0.60, 0.85</td>
+<td class="gt_row gt_center" headers="p.value_3">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">Bilateral</td>
+<td class="gt_row gt_center" headers="estimate_1">0.10</td>
+<td class="gt_row gt_center" headers="conf.low_1">-2.0, 2.2</td>
+<td class="gt_row gt_center" headers="p.value_1">0.93</td>
+<td class="gt_row gt_center" headers="estimate_2">0.06</td>
+<td class="gt_row gt_center" headers="conf.low_2">-2.0, 2.1</td>
+<td class="gt_row gt_center" headers="p.value_2">&gt;0.9</td>
+<td class="gt_row gt_center" headers="estimate_3">0.07</td>
+<td class="gt_row gt_center" headers="conf.low_3">-1.97, 2.11</td>
+<td class="gt_row gt_center" headers="p.value_3">0.947</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">Sex</td>
+<td class="gt_row gt_center" headers="estimate_1">0.03</td>
+<td class="gt_row gt_center" headers="conf.low_1">-0.97, 1.0</td>
+<td class="gt_row gt_center" headers="p.value_1">0.95</td>
+<td class="gt_row gt_center" headers="estimate_2">0.10</td>
+<td class="gt_row gt_center" headers="conf.low_2">-0.90, 1.1</td>
+<td class="gt_row gt_center" headers="p.value_2">0.8</td>
+<td class="gt_row gt_center" headers="estimate_3">0.27</td>
+<td class="gt_row gt_center" headers="conf.low_3">-0.78, 1.32</td>
+<td class="gt_row gt_center" headers="p.value_3">0.613</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">AgeAtSurgery</td>
+<td class="gt_row gt_center" headers="estimate_1">0.02</td>
+<td class="gt_row gt_center" headers="conf.low_1">-0.03, 0.08</td>
+<td class="gt_row gt_center" headers="p.value_1">0.37</td>
+<td class="gt_row gt_center" headers="estimate_2">0.03</td>
+<td class="gt_row gt_center" headers="conf.low_2">-0.03, 0.08</td>
+<td class="gt_row gt_center" headers="p.value_2">0.3</td>
+<td class="gt_row gt_center" headers="estimate_3">0.03</td>
+<td class="gt_row gt_center" headers="conf.low_3">-0.03, 0.08</td>
+<td class="gt_row gt_center" headers="p.value_3">0.351</td>
+</tr>
+</tbody><tfoot class="gt_sourcenotes">
+<tr class="odd">
+<td colspan="10" class="gt_sourcenote">Abbreviation: CI = Confidence Interval</td>
+</tr>
+</tfoot>
+
+</table>
+
+</div>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="discussion" class="level1" data-number="4">
@@ -2597,8 +4699,8 @@ Aden-Buie, Garrick. 2023. <span>“Epoxy: String Interpolation for Documents, Re
 <div id="ref-quarto" class="csl-entry" role="listitem">
 Allaire, JJ, and Christophe Dervieux. 2024. <span>“Quarto: R Interface to ’Quarto’ Markdown Publishing System.”</span> <a href="https://CRAN.R-project.org/package=quarto">https://CRAN.R-project.org/package=quarto</a>.
 </div>
-<div id="ref-openxlsx2" class="csl-entry" role="listitem">
-Barbone, Jordan Mark, and Jan Marvin Garbuszus. 2024. <span>“Openxlsx2: Read, Write and Edit ’Xlsx’ Files.”</span> <a href="https://janmarvin.github.io/openxlsx2/">https://janmarvin.github.io/openxlsx2/</a>.
+<div id="ref-marginaleffects" class="csl-entry" role="listitem">
+Arel-Bundock, Vincent. 2024. <span>“Marginaleffects: Predictions, Comparisons, Slopes, Marginal Means, and Hypothesis Tests.”</span> <a href="https://CRAN.R-project.org/package=marginaleffects">https://CRAN.R-project.org/package=marginaleffects</a>.
 </div>
 <div id="ref-googlesheets4" class="csl-entry" role="listitem">
 Bryan, Jennifer. 2023. <span>“Googlesheets4: Access Google Sheets Using the Sheets API V4.”</span> <a href="https://CRAN.R-project.org/package=googlesheets4">https://CRAN.R-project.org/package=googlesheets4</a>.
@@ -2606,11 +4708,68 @@ Bryan, Jennifer. 2023. <span>“Googlesheets4: Access Google Sheets Using the Sh
 <div id="ref-gargle" class="csl-entry" role="listitem">
 Bryan, Jennifer, Craig Citro, and Hadley Wickham. 2023. <span>“Gargle: Utilities for Working with Google APIs.”</span> <a href="https://CRAN.R-project.org/package=gargle">https://CRAN.R-project.org/package=gargle</a>.
 </div>
+<div id="ref-pwrss" class="csl-entry" role="listitem">
+Bulus, Metin. 2023. <span>“<span></span>Pwrss<span></span>: Statistical Power and Sample Size Calculation Tools.”</span> <a href="https://CRAN.R-project.org/package=pwrss">https://CRAN.R-project.org/package=pwrss</a>.
+</div>
+<div id="ref-mice" class="csl-entry" role="listitem">
+Buuren, Stef van, and Karin Groothuis-Oudshoorn. 2011. <span>“<span></span>Mice<span></span>: Multivariate Imputation by Chained Equations in r”</span> 45: 1–67. <a href="https://doi.org/10.18637/jss.v045.i03">https://doi.org/10.18637/jss.v045.i03</a>.
+</div>
+<div id="ref-carroll2020" class="csl-entry" role="listitem">
+Carroll, Orlagh U., Tim P. Morris, and Ruth H. Keogh. 2020. <span>“How Are Missing Data in Covariates Handled in Observational Time-to-Event Studies in Oncology? A Systematic Review.”</span> <em>BMC Medical Research Methodology</em> 20 (1). <a href="https://doi.org/10.1186/s12874-020-01018-7">https://doi.org/10.1186/s12874-020-01018-7</a>.
+</div>
+<div id="ref-cro2020" class="csl-entry" role="listitem">
+Cro, Suzie, Tim P. Morris, Brennan C. Kahan, Victoria R. Cornelius, and James R. Carpenter. 2020. <span>“A Four-Step Strategy for Handling Missing Outcome Data in Randomised Trials Affected by a Pandemic.”</span> <em>BMC Medical Research Methodology</em> 20 (1). <a href="https://doi.org/10.1186/s12874-020-01089-6">https://doi.org/10.1186/s12874-020-01089-6</a>.
+</div>
+<div id="ref-googledrive" class="csl-entry" role="listitem">
+D’Agostino McGowan, Lucy, and Jennifer Bryan. 2023. <span>“Googledrive: An Interface to Google Drive.”</span> <a href="https://CRAN.R-project.org/package=googledrive">https://CRAN.R-project.org/package=googledrive</a>.
+</div>
+<div id="ref-davies2015" class="csl-entry" role="listitem">
+Davies, G. Matt, and Alan Gray. 2015. <span>“Don’t Let Spurious Accusations of Pseudoreplication Limit Our Ability to Learn from Natural Experiments (and Other Messy Kinds of Ecological Monitoring).”</span> <em>Ecology and Evolution</em> 5 (22): 5295–5304. <a href="https://doi.org/10.1002/ece3.1782">https://doi.org/10.1002/ece3.1782</a>.
+</div>
+<div id="ref-homma2008" class="csl-entry" role="listitem">
+Homma, Yukio, Masaki Yoshida, Tomonori Yamanishi, and Momokazu Gotoh. 2008. <span>“Core Lower Urinary Tract Symptom Score (CLSS) Questionnaire: A Reliable Tool in the Overall Assessment of Lower Urinary Tract Symptoms.”</span> <em>International Journal of Urology</em> 15 (9): 816–20. <a href="https://doi.org/10.1111/j.1442-2042.2008.02121.x">https://doi.org/10.1111/j.1442-2042.2008.02121.x</a>.
+</div>
+<div id="ref-lazic2010" class="csl-entry" role="listitem">
+Lazic, Stanley E. 2010. <span>“The Problem of Pseudoreplication in Neuroscientific Studies: Is It Affecting Your Analysis?”</span> <em>BMC Neuroscience</em> 11 (1). <a href="https://doi.org/10.1186/1471-2202-11-5">https://doi.org/10.1186/1471-2202-11-5</a>.
+</div>
+<div id="ref-madley-dowd2019" class="csl-entry" role="listitem">
+Madley-Dowd, Paul, Rachael Hughes, Kate Tilling, and Jon Heron. 2019. <span>“The Proportion of Missing Data Should Not Be Used to Guide Decisions on Multiple Imputation.”</span> <em>Journal of Clinical Epidemiology</em> 110 (June): 63–73. <a href="https://doi.org/10.1016/j.jclinepi.2019.02.016">https://doi.org/10.1016/j.jclinepi.2019.02.016</a>.
+</div>
+<div id="ref-stats" class="csl-entry" role="listitem">
+R Core Team. 2022. <span>“R: A Language and Environment for Statistical Computing.”</span> <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+</div>
 <div id="ref-base" class="csl-entry" role="listitem">
-R Core Team. 2023. <span>“R: A Language and Environment for Statistical Computing.”</span> <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+———. 2023. <span>“R: A Language and Environment for Statistical Computing.”</span> <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+</div>
+<div id="ref-pacman" class="csl-entry" role="listitem">
+Rinker, Tyler W., and Dason Kurkiewicz. 2018. <span>“<span></span>Pacman<span></span>: <span></span>P<span></span>ackage Management for <span></span>r<span></span>.”</span> <a href="http://github.com/trinker/pacman">http://github.com/trinker/pacman</a>.
+</div>
+<div id="ref-sedgwick2014" class="csl-entry" role="listitem">
+Sedgwick, P. 2014. <span>“Bias in Observational Study Designs: Prospective Cohort Studies.”</span> <em>BMJ</em> 349 (dec19 2): g7731–31. <a href="https://doi.org/10.1136/bmj.g7731">https://doi.org/10.1136/bmj.g7731</a>.
+</div>
+<div id="ref-gtsummary" class="csl-entry" role="listitem">
+Sjoberg, Daniel D., Karissa Whiting, Michael Curry, Jessica A. Lavery, and Joseph Larmarange. 2021. <span>“Reproducible Summary Tables with the Gtsummary Package”</span> 13: 570–80. <a href="https://doi.org/10.32614/RJ-2021-053">https://doi.org/10.32614/RJ-2021-053</a>.
+</div>
+<div id="ref-tennant2020" class="csl-entry" role="listitem">
+Tennant, Peter W G, Eleanor J Murray, Kellyn F Arnold, Laurie Berrie, Matthew P Fox, Sarah C Gadd, Wendy J Harrison, et al. 2020. <span>“Use of Directed Acyclic Graphs (DAGs) to Identify Confounders in Applied Health Research: Review and Recommendations.”</span> <em>International Journal of Epidemiology</em> 50 (2): 620–32. <a href="https://doi.org/10.1093/ije/dyaa213">https://doi.org/10.1093/ije/dyaa213</a>.
+</div>
+<div id="ref-naniar" class="csl-entry" role="listitem">
+Tierney, Nicholas, and Dianne Cook. 2023. <span>“Expanding Tidy Data Principles to Facilitate Missing Data Exploration, Visualization and Assessment of Imputations”</span> 105. <a href="https://doi.org/10.18637/jss.v105.i07">https://doi.org/10.18637/jss.v105.i07</a>.
 </div>
 <div id="ref-Vandenbroucke2007" class="csl-entry" role="listitem">
 Vandenbroucke, Jan P, Erik von Elm, Douglas G Altman, Peter C Gøtzsche, Cynthia D Mulrow, Stuart J Pocock, Charles Poole, James J Schlesselman, and Matthias Egger. 2007. <span>“Strengthening the Reporting of Observational Studies in Epidemiology (STROBE): Explanation and Elaboration.”</span> <em>PLoS Medicine</em> 4 (10): e297. <a href="https://doi.org/10.1371/journal.pmed.0040297">https://doi.org/10.1371/journal.pmed.0040297</a>.
+</div>
+<div id="ref-forcats" class="csl-entry" role="listitem">
+Wickham, Hadley. 2023a. <span>“Forcats: Tools for Working with Categorical Variables (Factors).”</span> <a href="https://CRAN.R-project.org/package=forcats">https://CRAN.R-project.org/package=forcats</a>.
+</div>
+<div id="ref-stringr" class="csl-entry" role="listitem">
+———. 2023b. <span>“Stringr: Simple, Consistent Wrappers for Common String Operations.”</span> <a href="https://CRAN.R-project.org/package=stringr">https://CRAN.R-project.org/package=stringr</a>.
+</div>
+<div id="ref-tidyverse" class="csl-entry" role="listitem">
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. <span>“Welcome to the <span></span>Tidyverse<span></span>”</span> 4: 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>.
+</div>
+<div id="ref-tidyr" class="csl-entry" role="listitem">
+Wickham, Hadley, Davis Vaughan, and Maximilian Girlich. 2024. <span>“Tidyr: Tidy Messy Data.”</span> <a href="https://CRAN.R-project.org/package=tidyr">https://CRAN.R-project.org/package=tidyr</a>.
 </div>
 </div></section></div></main>
 <!-- /main column -->

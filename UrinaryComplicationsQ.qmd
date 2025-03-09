@@ -201,45 +201,39 @@ The study objectives have evolved over time. The original study question as per 
 
 : Table 1a: Study *Question 1* as per study plan.
 
-+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Component    | Study-Specific                                                                                                                                                                     |
-+==============+====================================================================================================================================================================================+
-| Population   | In patients electing to undergo hip or knee total arthroplasty with one of four participating surgeons in a metropolitan public hospital                                           |
-+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Intervention | Receiving pre-emptive urinary catheterisation                                                                                                                                      |
-+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Comparator   | Compared to those that do not                                                                                                                                                      |
-+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Outcomes     | How do i) urinary symptoms as measured by the core lower urinary tract symptom score (CLSS) and ii) satisfaction with urinary management in-hospital at two weeks followup differ? |
-+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Study Design | Within an observational cohort design embedded into the SHARKS registry (QEII Orthopaedic Department)                                                                              |
-+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Component | Study-Specific |
+|----|----|
+| Population | In patients electing to undergo hip or knee total arthroplasty with one of four participating surgeons in a metropolitan public hospital |
+| Intervention | Receiving pre-emptive urinary catheterisation |
+| Comparator | Compared to those that do not |
+| Outcomes | How do i) urinary symptoms as measured by the core lower urinary tract symptom score (CLSS) and ii) satisfaction with urinary management in-hospital at two weeks followup differ? |
+| Study Design | Within an observational cohort design embedded into the SHARKS registry (QEII Orthopaedic Department) |
 
 : Table 1b: Study *Question 2*
 
 ### Hypotheses
 
-+-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Question  | Clinical                                                                                                                                                                       | Statistical                                                                                                                                                   |
-+===========+================================================================================================================================================================================+===============================================================================================================================================================+
-| 1         | 1.  Patients reporting an increase or appearance of lower urinary tract symptoms will possess a combination of risk factors, including                                         | H1: The predicted probability of a change in urinary symptoms by a multivariable model will be closer to actual probabilities than expected by chance         |
-|           |                                                                                                                                                                                |                                                                                                                                                               |
-|           |     1.  Symptoms prior to surgery                                                                                                                                              | H0: The predicted probability of a change in urinary symptoms by a multivariable model will **not be** closer to actual probabilities than expected by chance |
-|           |                                                                                                                                                                                |                                                                                                                                                               |
-|           |     2.  Catheterisation (planned vs unplanned)                                                                                                                                 |                                                                                                                                                               |
-|           |                                                                                                                                                                                |                                                                                                                                                               |
-|           |     3.  Comorbidities                                                                                                                                                          |                                                                                                                                                               |
-|           |                                                                                                                                                                                |                                                                                                                                                               |
-|           |     4.  Older age                                                                                                                                                              |                                                                                                                                                               |
-|           |                                                                                                                                                                                |                                                                                                                                                               |
-|           |     5.  Male gender                                                                                                                                                            |                                                                                                                                                               |
-+-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 1         | Patients with symptoms will tend to be less satisfied with the management received for managing POUR                                                                           |                                                                                                                                                               |
-+-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 2         | Patients receiving reactive catheterisation on the recovery ward in response to image-detected urinary retention will report worse CLSS and satisfaction at two week follow up | H1: The predicted probability of a postoperative urinary symptoms by a multivariable model will be closer to actual probabilities than expected by chance     |
-|           |                                                                                                                                                                                |                                                                                                                                                               |
-|           |                                                                                                                                                                                | H0: The predicted probability of a change in urinary symptoms by a multivariable model will **not be** closer to actual probabilities than expected by chance |
-+-----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Question | Clinical                                                                                                                                                                       | Statistical                                                                                                                                                   |
++==========+================================================================================================================================================================================+===============================================================================================================================================================+
+| 1        | 1.  Patients reporting an increase or appearance of lower urinary tract symptoms will possess a combination of risk factors, including                                         | H1: The predicted probability of a change in urinary symptoms by a multivariable model will be closer to actual probabilities than expected by chance         |
+|          |                                                                                                                                                                                |                                                                                                                                                               |
+|          |     1.  Symptoms prior to surgery                                                                                                                                              | H0: The predicted probability of a change in urinary symptoms by a multivariable model will **not be** closer to actual probabilities than expected by chance |
+|          |                                                                                                                                                                                |                                                                                                                                                               |
+|          |     2.  Catheterisation (planned vs unplanned)                                                                                                                                 |                                                                                                                                                               |
+|          |                                                                                                                                                                                |                                                                                                                                                               |
+|          |     3.  Comorbidities                                                                                                                                                          |                                                                                                                                                               |
+|          |                                                                                                                                                                                |                                                                                                                                                               |
+|          |     4.  Older age                                                                                                                                                              |                                                                                                                                                               |
+|          |                                                                                                                                                                                |                                                                                                                                                               |
+|          |     5.  Male gender                                                                                                                                                            |                                                                                                                                                               |
++----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 1        | Patients with symptoms will tend to be less satisfied with the management received for managing POUR                                                                           |                                                                                                                                                               |
++----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2        | Patients receiving reactive catheterisation on the recovery ward in response to image-detected urinary retention will report worse CLSS and satisfaction at two week follow up | H1: The predicted probability of a postoperative urinary symptoms by a multivariable model will be closer to actual probabilities than expected by chance     |
+|          |                                                                                                                                                                                |                                                                                                                                                               |
+|          |                                                                                                                                                                                | H0: The predicted probability of a change in urinary symptoms by a multivariable model will **not be** closer to actual probabilities than expected by chance |
++----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 : Table 2: Study hypotheses for present analysis
 
@@ -575,12 +569,33 @@ miss_case_table() |> gt::gt() |>
 
 #### Management
 
-Multiple imputation under the assumption of *missing at random* as described in [@cro2020]. The *mice* (v`{r} utils::packageVersion("mice")`) [@mice] was used to impute the dataset. A predictor matrix was created to remove record identifiers and passive variables (e.g. PCS categorisation) from the imputation. Imputation was performed over 20 replications and stored in a variable for further processing.
+Multiple imputation under the assumption of *missing at random* as described in [@cro2020]. The *mice* (v`{r} utils::packageVersion("mice")`) [@mice] was used to impute the dataset.
+
+```{r}
+
+CLSSModelInput <- MasterFilter2 |> dplyr::select(
+    CombID,
+    AgeAtSurgery,
+    Sex,
+    Bilateral,
+    Joint,
+    `Pre-emptive IDC`,
+    `Reactive IDC insertion`,
+    `Baseline CLSS - Total Score`,
+    `Postoperative CLSS - Total score`
+) |> dplyr::rename(
+      PreIDC = "Pre-emptive IDC",
+    ReactIDC = "Reactive IDC insertion",
+    BaseCLSS = "Baseline CLSS - Total Score",
+    PostCLSS = "Postoperative CLSS - Total score"
+)
+
+```
 
 ```{r}
 
 # First create your predictor matrix as before
-predM <- mice::make.predictorMatrix(CLSSTotal2)
+predM <- mice::make.predictorMatrix(CLSSModelInput)
 
 # Switch off IDs from predicting
 predM[,"CombID"] <- 0 
@@ -588,11 +603,11 @@ predM["CombID",] <- 0
 
 
 # Create a method vector
-meth <- mice::make.method(CLSSTotal2)
+meth <- mice::make.method(CLSSModelInput)
 
 # Modified mice command including method specification
 MasterImp <- mice::mice(
-  CLSSTotal2,
+  CLSSModelInput,
   maxit = 10,
   seed = 4218,
   m = 20,
@@ -622,8 +637,8 @@ The estimated PCS-SF total score from the imputation model versus the distributi
 
 ```{r}
 ggplot() +
-  geom_density(data = complete(MasterImp, 1), aes(x = Total, color = "Observed")) +
-  geom_density(data = complete(MasterImp, 2:10), aes(x = Total, color = "Imputed")) +
+  geom_density(data = complete(MasterImp, 1), aes(x = PostCLSS, color = "Observed")) +
+  geom_density(data = complete(MasterImp, 2:10), aes(x = PostCLSS, color = "Imputed")) +
   labs(title = "CLSS Total: Observed vs. Imputed Distributions")
 ```
 
@@ -688,7 +703,7 @@ A linear model was fitted to the imputed data using *stats* (v`{r} utils::packag
 
 CLSSMod <- with(
   MasterImp, 
-  exp = lme4::lmer(Total ~ `Pre-emptive IDC`*Timepoint + Sex + AgeAtSurgery + (1|CombID))
+  exp = lm(PostCLSS ~ PreIDC + BaseCLSS + Bilateral + Sex + AgeAtSurgery)
     )
 
 
@@ -892,21 +907,6 @@ knitr::knit_print(CLSSTotal1a)
 ```
 
 Figure 2: Summary of CLSS total score before and after lower limb arthroplasty (complete case analysis)
-
-```{r}
- ggpaired(
-   CLSSTotal2, 
-   x = "Timepoint", 
-   y = "Total",
-   id = "CombID",
-   color = "blue", 
-   line.color = "black", line.size = 0.4,
-   palette = "npg") +
- stat_compare_means(
-   paired = TRUE,
-   na.rm = TRUE
-   )
-```
 
 ```{r}
 
@@ -1185,11 +1185,13 @@ CLSSTotal3 <- CLSSTotal2 |> mutate(
 
 ```
 
+Complete Case Analysis - Full set
+
 ```{r}
 
-CLSSModCCA <- lme4::lmer(
-  Total ~ `Pre-emptive IDC`*Timepoint + Bilateral + Sex + AgeAtSurgery + (1|CombID),
-  data = CLSSTotal3
+CLSSModCCA <- lm(
+  PostCLSS ~ PreIDC + BaseCLSS + Bilateral + Sex + AgeAtSurgery,
+  CLSSModelInput
   )
 
 ```
@@ -1198,74 +1200,34 @@ CLSSModCCA <- lme4::lmer(
 
 TableCLSSCCA <- gtsummary::tbl_regression(
   CLSSModCCA,
-  exponentiate = TRUE,
   pvalue_fun = label_style_pvalue(digits = 2),
-  tidy_fun = \(x,...) broom.mixed::tidy(),
   show_single_row = c(
-    "Pre-emptive IDC",
-    "Timepoint",
+    "PreIDC",
     "Bilateral",
     "Sex"
-  )
-) |> add_global_p()
+  ) 
+  ) |> add_global_p()
 
 knitr::knit_print(TableCLSSCCA)
 
 
 ```
 
+Model results - Imputed dataset (Full)
+
 ```{r}
 
-CLSSModImpFull <- with(
-  MasterImp,
-  lme4::lmer(Total ~ `Pre-emptive IDC`*Timepoint + Bilateral + Sex + AgeAtSurgery + (1|CombID))
-) |> gtsummary::tbl_regression(
-  exponentiate = TRUE,
-  pvalue_fun = label_style_pvalue(digits = 2),
+TableCLSSImpFull <- gtsummary::tbl_regression(
+  CLSSMod,
   show_single_row = c(
-    "Pre-emptive IDC",
-    "Timepoint",
+    "PreIDC",
     "Bilateral",
     "Sex"
-  )
-) |> add_global_p()
+  ) 
+  ) 
 
-knitr::knit_print(CLSSModImpFull)
+knitr::knit_print(TableCLSSImpFull)
 
-
-
-```
-
-```{r}
-
-CCAModTable <- gtsummary::tbl_regression(
-  CCAMod
-)
-
-knitr::knit_print(CCAModTable)
-
-```
-
-```{r}
-
-CCAModTable2 <- gtsummary::tbl_regression(
-  CCAMod1
-)
-
-knitr::knit_print(CCAModTable2)
-
-```
-
-```{r}
-
-CLSSFit <- gtsummary::tbl_regression(
-  CLSSMod,
-  tidy_fun = pool_and_tidy_mice,
-  estimate_fun = function(x) style_number(x, digits = 2), 
-  pvalue_fun = function(x) style_pvalue(x, digits = 3)
-)  
-
-knitr::knit_print(CLSSFit)
 
 ```
 
@@ -1275,7 +1237,7 @@ Predictions were generated from the model and summarised.
 
 # Calculate marginal means
 CLSSPredict1 <- marginaleffects::predictions(
-  CLSSModImpFull,
+  CLSSMod,
   type = "response"
   ) 
 
@@ -1283,7 +1245,7 @@ CLSSPredict1 <- marginaleffects::predictions(
 ```
 
 ```{r}
-CLSSprPlot1 <- ggplot(data = CLSSPredict1, mapping = aes(y = Timepoint, x = Total, fill = `Pre-emptive IDC`)) + stat_slabinterval(
+CLSSprPlot1 <- ggplot(data = CLSSPredict1, mapping = aes(y = PreIDC, x = PostCLSS, fill = Sex)) + stat_slabinterval(
   aes(thickness = after_stat(pdf*n)), 
   scale = 0.7,
   alpha = 0.7,
@@ -1312,21 +1274,26 @@ knitr::knit_print(CLSSprPlot1)
 ```{r}
 CLSSModSens <- with(
   MasterImp,
-  lme4::lmer(Total ~ `Pre-emptive IDC`*Timepoint + Sex + AgeAtSurgery + (1|CombID), 
-             subset = `Reactive IDC insertion` == "No")
+  stats::lm(PostCLSS ~ PreIDC + BaseCLSS + Bilateral + Sex + AgeAtSurgery, 
+             subset = ReactIDC == "No")
 )
 ```
 
 ```{r}
 
-CLSSFit2 <- gtsummary::tbl_regression(
+TableCLSSImpSens <- gtsummary::tbl_regression(
   CLSSModSens,
   tidy_fun = pool_and_tidy_mice,
   estimate_fun = function(x) style_number(x, digits = 2), 
-  pvalue_fun = function(x) style_pvalue(x, digits = 3)
+  pvalue_fun = function(x) style_pvalue(x, digits = 3),
+    show_single_row = c(
+    "PreIDC",
+    "Bilateral",
+    "Sex"
+  ) 
 )  
 
-knitr::knit_print(CLSSFit2)
+knitr::knit_print(TableCLSSImpSens)
 ```
 
 Predictions were generated from the model and summarised.
@@ -1343,7 +1310,7 @@ CLSSPredict2 <- marginaleffects::predictions(
 ```
 
 ```{r}
-CLSSprPlot1 <- ggplot(data = CLSSPredict, mapping = aes(y = Timepoint, x = Total, fill = `Pre-emptive IDC`)) + stat_slabinterval(
+CLSSprPlot2 <- ggplot(data = CLSSPredict2, mapping = aes(y = PreIDC, x = PostCLSS, fill = Sex)) + stat_slabinterval(
   aes(thickness = after_stat(pdf*n)), 
   scale = 0.7,
   alpha = 0.7,
@@ -1362,7 +1329,7 @@ CLSSprPlot1 <- ggplot(data = CLSSPredict, mapping = aes(y = Timepoint, x = Total
     'CLSS Predicted by Timepoint and Group'
     )
 
-knitr::knit_print(CLSSprPlot1)
+knitr::knit_print(CLSSprPlot2)
 ```
 
 ```{r}
@@ -1370,9 +1337,11 @@ knitr::knit_print(CLSSprPlot1)
 # merge tables
 CLSSRegMerge <-
   tbl_merge(
-    tbls = list(t1, CLSSFit2),
-    tab_spanner = c("Complete Case","ImputationFull", "ImputationReactSubset")
+    tbls = list(TableCLSSCCA, TableCLSSImpFull,TableCLSSImpSens),
+    tab_spanner = c("Complete Case","ImputFull", "ImputSensitivity")
   )
+
+knitr::knit_print(CLSSRegMerge)
 
 ```
 
