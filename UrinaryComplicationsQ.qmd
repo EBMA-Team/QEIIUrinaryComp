@@ -1172,17 +1172,11 @@ knitr::knit_print(CLSSTransSat)
 
 *Critically analyze the presentation and interpretation of primary findings, including effect estimates and confidence intervals.*
 
+Regression Results - Q2
+
 ```{r}
 
-CLSSTotal2a <- CLSSTotal2 |> group_by(
-  CombID
-) |> count() |> dplyr::filter(
-  n == 2
-) |> ungroup()
-
-CLSSTotal3 <- CLSSTotal2 |> dplyr::filter(
-    CombID %in% CLSSTotal2a$CombID
-) |> mutate(
+CLSSTotal3 <- CLSSTotal2 |> mutate(
   Timepoint1 = if_else(
     Timepoint == "Pre", 0,1
   ),
@@ -1195,101 +1189,54 @@ CLSSTotal3 <- CLSSTotal2 |> dplyr::filter(
 
 ```{r}
 
-CLSSMod1 <- lme4::lmer(
-  Total ~ Sex + AgeAtSurgery + Timepoint + (1|CombID),
+CLSSModCCA <- lme4::lmer(
+  Total ~ `Pre-emptive IDC`*Timepoint + Bilateral + Sex + AgeAtSurgery + (1|CombID),
   data = CLSSTotal3
   )
-  
-  CLSSMod2 <- lme4::lmer(
-  Total ~ Timepoint1 + Sex + AgeAtSurgery + (Timepoint1||CombID),
-  data = CLSSTotal3 |> dplyr::filter(
-    PreIDC == 1
-  )
-  )
 
 ```
 
-```{r}
-confint(CLSSMod2)
-```
-
-```{r}
-summary(CLSSMod2)
-```
 
 ```{r}
 
-CLSSModTable <- gtsummary::tbl_regression(
-  CLSSMod2,
+TableCLSSCCA <- gtsummary::tbl_regression(
+  CLSSModCCA,
   exponentiate = TRUE,
   pvalue_fun = label_style_pvalue(digits = 2),
-  tidy_fun = broom.mixed::tidy,
+  tidy_fun = \(x,...) broom.mixed::tidy(),
   show_single_row = c(
-    "Timepoint1",
+    "Pre-emptive IDC",
+    "Timepoint",
+    "Bilateral",
     "Sex"
   )
 ) |> add_global_p()
 
-knitr::knit_print(CLSSModTable)
+knitr::knit_print(TableCLSSCCA)
 
 
 ```
 
-### Regression Results - Q2
-
-Complete case analysis
 
 ```{r}
 
+CLSSModImpFull <- with(
+  MasterImp,
+  lme4::lmer(Total ~ `Pre-emptive IDC`*Timepoint + Bilateral + Sex + AgeAtSurgery + (1|CombID))
+) |> gtsummary::tbl_regression(
+  exponentiate = TRUE,
+  pvalue_fun = label_style_pvalue(digits = 2),
+  show_single_row = c(
+    "Pre-emptive IDC",
+    "Timepoint",
+    "Bilateral",
+    "Sex"
+  )
+) |> add_global_p()
 
-CCAMod <- stats::lm(
-  formula = `Postoperative CLSS - Total score` ~ `Pre-emptive IDC` + `Baseline CLSS - Total Score` + Bilateral + AgeAtSurgery + Sex,
-  data = MasterFilter2
-)
-
-CCAMod1 <- stats::lm(
-  formula = `Postoperative CLSS - Total score` ~ `Pre-emptive IDC` + `Baseline CLSS - Total Score` + Bilateral + AgeAtSurgery + Sex,
-  data = MasterFilter2,
-  subset = `Reactive IDC insertion` == "No"
-)
-
-
-
-```
-
-```{r}
-
-CCAModTable <- gtsummary::tbl_regression(
-  CCAMod
-)
-
-knitr::knit_print(CCAModTable)
-
-```
-
-```{r}
-
-CCAModTable2 <- gtsummary::tbl_regression(
-  CCAMod1
-)
-
-knitr::knit_print(CCAModTable2)
-
-```
+knitr::knit_print(CLSSModImpFull)
 
 
-
-
-```{r}
-
-CLSSFit <- gtsummary::tbl_regression(
-  CLSSMod,
-  tidy_fun = pool_and_tidy_mice,
-  estimate_fun = function(x) style_number(x, digits = 2), 
-  pvalue_fun = function(x) style_pvalue(x, digits = 3)
-)  
-
-knitr::knit_print(CLSSFit)
 ```
 
 Predictions were generated from the model and summarised.
@@ -1297,8 +1244,8 @@ Predictions were generated from the model and summarised.
 ```{r}
 
 # Calculate marginal means
-CLSSPredict <- marginaleffects::predictions(
-  CLSSMod,
+CLSSPredict1 <- marginaleffects::predictions(
+  CLSSModImpFull,
   type = "response"
   ) 
 
@@ -1307,7 +1254,7 @@ CLSSPredict <- marginaleffects::predictions(
 
 
 ```{r}
-CLSSprPlot1 <- ggplot(data = CLSSPredict, mapping = aes(y = Timepoint, x = Total, fill = `Pre-emptive IDC`)) + stat_slabinterval(
+CLSSprPlot1 <- ggplot(data = CLSSPredict1, mapping = aes(y = Timepoint, x = Total, fill = `Pre-emptive IDC`)) + stat_slabinterval(
   aes(thickness = after_stat(pdf*n)), 
   scale = 0.7,
   alpha = 0.7,
@@ -1389,6 +1336,19 @@ CLSSprPlot1 <- ggplot(data = CLSSPredict, mapping = aes(y = Timepoint, x = Total
 
 knitr::knit_print(CLSSprPlot1)
 ```
+
+
+```{r}
+
+# merge tables
+CLSSRegMerge <-
+  tbl_merge(
+    tbls = list(t1, CLSSFit2),
+    tab_spanner = c("Complete Case","ImputationFull", "ImputationReactSubset")
+  )
+
+```
+
 
 # Discussion:
 
