@@ -676,11 +676,11 @@ To answer Question 1, a minimal clinically important difference is required for 
 
 <!--# *Evaluate the appropriateness and robustness of the statistical techniques used for analysis.* -->
 
-The participant flow chart was generated using the *consort* package (see STROBE 8). 
+The participant flow chart was generated using the *consort* package (see STROBE 8).
 
 Baseline data was compared between groups of preemptive IDC (Yes \| No) using student t-test for continuous variables and fisher exact test (binary categorical) or chi-square test (categorical with \>2 categories) with correction for ties. Correction for multiple comparisons was implemented with the *Holm* method using the *gtsummary* package (v`{r} utils::packageVersion("gtsummary")`) [@gtsummary].
 
-Complete case analysis of the CLSS Total involved an unadjusted comparison between pre and post scores using a paired t-test. 
+Complete case analysis of the CLSS Total involved an unadjusted comparison between pre and post scores using a paired t-test.
 
 A linear model was fitted to the imputed data using *stats* (v`{r} utils::packageVersion("stats")`) [@stats] with the following form.
 
@@ -893,7 +893,6 @@ knitr::knit_print(CLSSTotal1a)
 
 Figure 2: Summary of CLSS total score before and after lower limb arthroplasty (complete case analysis)
 
-
 ```{r}
  ggpaired(
    CLSSTotal2, 
@@ -908,7 +907,6 @@ Figure 2: Summary of CLSS total score before and after lower limb arthroplasty (
    na.rm = TRUE
    )
 ```
-
 
 ```{r}
 
@@ -1196,7 +1194,6 @@ CLSSModCCA <- lme4::lmer(
 
 ```
 
-
 ```{r}
 
 TableCLSSCCA <- gtsummary::tbl_regression(
@@ -1217,7 +1214,6 @@ knitr::knit_print(TableCLSSCCA)
 
 ```
 
-
 ```{r}
 
 CLSSModImpFull <- with(
@@ -1237,6 +1233,40 @@ CLSSModImpFull <- with(
 knitr::knit_print(CLSSModImpFull)
 
 
+
+```
+
+```{r}
+
+CCAModTable <- gtsummary::tbl_regression(
+  CCAMod
+)
+
+knitr::knit_print(CCAModTable)
+
+```
+
+```{r}
+
+CCAModTable2 <- gtsummary::tbl_regression(
+  CCAMod1
+)
+
+knitr::knit_print(CCAModTable2)
+
+```
+
+```{r}
+
+CLSSFit <- gtsummary::tbl_regression(
+  CLSSMod,
+  tidy_fun = pool_and_tidy_mice,
+  estimate_fun = function(x) style_number(x, digits = 2), 
+  pvalue_fun = function(x) style_pvalue(x, digits = 3)
+)  
+
+knitr::knit_print(CLSSFit)
+
 ```
 
 Predictions were generated from the model and summarised.
@@ -1251,7 +1281,6 @@ CLSSPredict1 <- marginaleffects::predictions(
 
 
 ```
-
 
 ```{r}
 CLSSprPlot1 <- ggplot(data = CLSSPredict1, mapping = aes(y = Timepoint, x = Total, fill = `Pre-emptive IDC`)) + stat_slabinterval(
@@ -1313,7 +1342,6 @@ CLSSPredict2 <- marginaleffects::predictions(
 
 ```
 
-
 ```{r}
 CLSSprPlot1 <- ggplot(data = CLSSPredict, mapping = aes(y = Timepoint, x = Total, fill = `Pre-emptive IDC`)) + stat_slabinterval(
   aes(thickness = after_stat(pdf*n)), 
@@ -1337,7 +1365,6 @@ CLSSprPlot1 <- ggplot(data = CLSSPredict, mapping = aes(y = Timepoint, x = Total
 knitr::knit_print(CLSSprPlot1)
 ```
 
-
 ```{r}
 
 # merge tables
@@ -1348,7 +1375,6 @@ CLSSRegMerge <-
   )
 
 ```
-
 
 # Discussion:
 
